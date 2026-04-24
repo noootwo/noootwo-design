@@ -1,0 +1,41 @@
+name: Validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify skill package discovery
+        run: npx -y skills add . --list
+
+      - name: Verify harness bootstrap
+        run: |
+          tmpdir="$(mktemp -d)"
+          python scripts/bootstrap_noootwo_harness.py "$tmpdir"
+          test -f "$tmpdir/.noootwo/system.md"
+          test -f "$tmpdir/.noootwo/product-facts.md"
+          test -f "$tmpdir/.noootwo/brief.md"
+          test -f "$tmpdir/.noootwo/directions.md"
+          test -f "$tmpdir/.noootwo/review.md"
+          test -f "$tmpdir/.noootwo/handoff/implementation.md"
+          test -f "$tmpdir/.noootwo/handoff/acceptance.md"
+          test -f "$tmpdir/.noootwo/handoff/assets.md"
