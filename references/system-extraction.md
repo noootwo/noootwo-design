@@ -2,6 +2,8 @@
 
 Persistent design memory lives in `.noootwo/system.md`.
 
+Read [design-system-setup.md](design-system-setup.md) first when the file is missing, stale, or still pending extraction.
+
 ## Source Priority
 
 1. Existing `.noootwo/system.md`
@@ -13,28 +15,32 @@ Persistent design memory lives in `.noootwo/system.md`.
 
 ## What To Extract
 
+- Brand primitives: colors, marks, imagery, and visual materials
 - Product purpose and audience
 - Tone and writing posture
-- Color system and token names if available
-- Typography stack and hierarchy
-- Spacing rhythm
-- Border radius, shadows, density, and surface language
-- Layout patterns
-- Interaction and motion language
-- Accessibility or platform constraints
-- "Never do this" constraints
+- Type system: confirmed fonts, fallback logic, hierarchy, and contrast strategy
+- Component patterns: recurring shells, cards, rails, panels, forms, navigation, and evidence patterns
+- Layout density: spacing rhythm, information density, and preferred structural moves
+- Motion language
+- Platform constraints
+- Known generic fallbacks that would degrade the work
+- Forbidden combinations and "never do this" constraints
 
 ## Output Shape For `.noootwo/system.md`
 
 - `Status`
-- `Updated from`
+- `Updated From`
+- `Brand primitives`
 - `Product`
 - `Audience and jobs`
 - `Tone and language`
-- `Visual system`
-- `Interaction language`
+- `Type system`
+- `Component patterns`
+- `Layout density`
+- `Motion language`
+- `Known generic fallbacks`
+- `Forbidden combinations`
 - `Platform constraints`
-- `Known anti-patterns`
 - `Refresh triggers`
 
 ## Rules
@@ -42,4 +48,5 @@ Persistent design memory lives in `.noootwo/system.md`.
 - Prefer exact values from code over inferred values from screenshots
 - If the current file says `Status: pending extraction`, treat it as missing
 - Keep project truth separate from task-specific experimentation
+- Mark inferred values as inferred
 - Update the file only when new information is concrete enough to persist

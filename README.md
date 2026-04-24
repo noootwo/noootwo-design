@@ -2,15 +2,15 @@
 
 Type once, get a design worth shipping.
 
-Noootwo Design is an open skill for turning a rough design request into a reusable design system, direction exploration, review loop, and implementation handoff. It is built for people who want something closer to the working behavior of Claude Design: persistent design memory, explicit direction work, structured review, and implementation-ready handoff.
+Noootwo Design is an open skill for turning a rough design request into a reusable design system, direction exploration, review loop, and implementation handoff. It is built for people who want something closer to the working behavior of Claude Design: design-system-first setup, explicit direction work, structured generator/evaluator loops, and implementation-ready handoff.
 
 ## What It Does
 
+- Establishes or refreshes project design system memory before task work
 - Expands a rough ask into a durable design brief
-- Extracts and refreshes project design system memory
-- Explores 3 design directions before committing
-- Forces an independent review loop with `refine` vs `pivot`
-- Produces a handoff bundle for another agent or engineer
+- Explores 2-3 design directions with explicit typography, density, and anti-pattern rules
+- Forces an evaluator loop with `ready`, `refine`, or `pivot`
+- Produces a handoff bundle for another agent or engineer only after review passes
 
 ## Install
 
@@ -30,9 +30,9 @@ npx skills add /path/to/noootwo-design -g -y
 
 Examples:
 
-- `Use $noootwo-design to design a new workbench home page for this product.`
+- `Use $noootwo-design to establish the design system for this product, then design a new workbench home page.`
 - `Use $noootwo-design to extract this project's design system.`
-- `Use $noootwo-design to review this prototype and decide whether to refine or pivot.`
+- `Use $noootwo-design to review this prototype and decide whether it is ready, should refine, or should pivot.`
 - `Use $noootwo-design to prepare an implementation handoff for this approved design.`
 
 ## Harness

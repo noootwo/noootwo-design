@@ -18,6 +18,16 @@ Status: pending; every deliverable should replace this with a real review before
 - functionality: TBD / 15
 - total: TBD / 100
 
+## Distinctiveness Audit
+
+- Point of view: TBD
+- Typography and density stance: TBD
+- Why this is not generic: TBD
+
+## Generic SaaS Flags
+
+- TBD
+
 ## What Works
 
 - TBD
@@ -28,7 +38,7 @@ Status: pending; every deliverable should replace this with a real review before
 
 ## Decision
 
-- refine or pivot: TBD
+- ready, refine, or pivot: TBD
 
 ## Highest-Leverage Fixes
 

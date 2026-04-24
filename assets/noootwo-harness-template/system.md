@@ -2,6 +2,18 @@
 
 Status: pending extraction; replace this template with project-specific truth before relying on it
 
+## Updated From
+
+- Sources: TBD
+- Confirmed vs inferred: TBD
+
+## Brand Primitives
+
+- Core colors and tokens: TBD
+- Marks or logos: TBD
+- Imagery and illustration rules: TBD
+- Existing UI evidence: TBD
+
 ## Product
 
 - Name: TBD
@@ -20,15 +32,26 @@ Status: pending extraction; replace this template with project-specific truth be
 - Preferred wording patterns: TBD
 - Wording to avoid: TBD
 
-## Visual System
+## Type System
 
-- Color system: TBD
-- Typography: TBD
-- Spacing and density: TBD
-- Surfaces and elevation: TBD
-- Layout patterns: TBD
+- Confirmed fonts: TBD
+- Fallback logic: TBD
+- Hierarchy and scale: TBD
+- Contrast strategy: TBD
 
-## Interaction Language
+## Component Patterns
+
+- Navigation and shell patterns: TBD
+- Content and evidence patterns: TBD
+- Forms, controls, and action patterns: TBD
+
+## Layout Density
+
+- Spacing rhythm: TBD
+- Information density: TBD
+- Preferred structural moves: TBD
+
+## Motion Language
 
 - Motion character: TBD
 - State feedback patterns: TBD
@@ -40,7 +63,11 @@ Status: pending extraction; replace this template with project-specific truth be
 - Accessibility constraints: TBD
 - Technical constraints: TBD
 
-## Known Anti-Patterns
+## Known Generic Fallbacks
+
+- TBD
+
+## Forbidden Combinations
 
 - TBD
 

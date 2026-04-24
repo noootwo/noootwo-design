@@ -15,6 +15,7 @@ Rules:
 - optimize for fidelity and clarity
 - make interaction flows believable
 - use this path to validate direction, not to masquerade as production code
+- critique the draft before polishing it
 
 ## 2. Web Or React Implementation
 
@@ -29,6 +30,7 @@ Rules:
 - extract tokens and vocabulary first
 - match the established design language before adding novelty
 - express the chosen direction through composition, rhythm, typography, and motion, not through a total style reset
+- do not jump to handoff until review says the direction is ready
 
 ## 3. Flutter Or Existing Application Handoff
 
@@ -42,6 +44,7 @@ Rules:
 - prefer structured handoff over forcing a web-shaped mockup into the codebase
 - capture component behavior, spacing, hierarchy, and motion in platform-neutral terms
 - include implementation priorities and acceptance criteria specific enough for the app team to execute
+- handoff is a post-review artifact, not the first draft
 
 ## Decision Rule
 
