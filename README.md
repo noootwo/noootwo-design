@@ -4,7 +4,7 @@ Type once, get a design worth shipping.
 
 Noootwo Design is an open skill for turning a rough design request into a reusable design system, explicit 3-direction exploration, review loop, and implementation handoff. It is built for people who want something closer to the working behavior of Claude Design: design-system-first setup, opinionated art-direction exploration, first-draft critique loops, and implementation-ready handoff.
 
-Current version: `v0.1.3`
+Current version: `v0.1.4`
 Version source: repository tag plus the root `VERSION` file.
 
 ## What It Does
