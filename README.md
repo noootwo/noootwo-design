@@ -17,13 +17,13 @@ Noootwo Design is an open skill for turning a rough design request into a reusab
 From a published repository:
 
 ```bash
-npx skills add <owner>/noootwo-design -g -y
+npx skills add noootwo/noootwo-design -g -y
 ```
 
 From a local checkout:
 
 ```bash
-npx skills add ./open-source/noootwo-design -g -y
+npx skills add /path/to/noootwo-design -g -y
 ```
 
 ## Use
