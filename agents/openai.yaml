@@ -1,0 +1,4 @@
+interface:
+  display_name: "Noootwo Design"
+  short_description: "Turn a rough design ask into directions, review, and implementation handoff"
+  default_prompt: "Use $noootwo-design to turn this design request into a reusable brief, design directions, review loop, and implementation handoff."
