@@ -33,9 +33,14 @@ Write the review to `.noootwo/review.md` with:
 - `Scores`
 - `Distinctiveness audit`
 - `Generic SaaS flags`
+- `What feels generic`
+- `What is the memorable move`
+- `Aesthetic coherence`
 - `What works`
 - `What breaks`
 - `Decision: ready, refine, or pivot`
+- `Forced redo trigger`
+- `Next action: return to directions or draft`
 - `Highest-leverage fixes`
 - `Open risks`
 
@@ -58,6 +63,24 @@ If 3 or more flags are present, or originality is structurally weak, default to 
 - `ready`: the direction is strong, the craft is credible, and the output avoids generic fallbacks
 - `refine`: the direction is right but execution, hierarchy, proof, or specificity is still weak
 - `pivot`: the underlying direction is too generic, mismatched, derivative, or structurally wrong
+
+## Memorable Move Check
+
+- If the reviewer cannot name the one unforgettable move, the design cannot be `ready`
+- If the memorable move exists in concept but is too weak in execution, default to `refine`
+
+## Aesthetic Coherence Check
+
+- Typography, color, layout, motion, components, and background/detail treatment should point at the same mood
+- If those systems pull in different directions, default to `refine`
+
+## Forced Redo Rules
+
+- If the draft lacks explicit type contrast, density stance, component vocabulary, motion thesis, or background/detail thesis, return to directions before refining
+- If the direction is right but execution is weak, return to draft with concrete fixes
+- If the direction itself is generic, return to directions instead of polishing the draft
+- "Clean but ordinary" is a failure mode, not a near-ready state
+- If safe SaaS layout, generic typography, and low-risk motion appear together, default to `pivot`
 
 ## Loop Rules
 

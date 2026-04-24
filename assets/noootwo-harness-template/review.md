@@ -28,6 +28,18 @@ Status: pending; every deliverable should replace this with a real review before
 
 - TBD
 
+## What Feels Generic
+
+- TBD
+
+## What Is The Memorable Move
+
+- TBD
+
+## Aesthetic Coherence
+
+- TBD
+
 ## What Works
 
 - TBD
@@ -39,6 +51,14 @@ Status: pending; every deliverable should replace this with a real review before
 ## Decision
 
 - ready, refine, or pivot: TBD
+
+## Forced Redo Trigger
+
+- TBD
+
+## Next Action
+
+- return to directions or draft: TBD
 
 ## Highest-Leverage Fixes
 

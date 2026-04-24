@@ -1,6 +1,6 @@
 ---
 name: noootwo-design
-description: Noootwo Design turns a rough design request into a reusable design system, direction exploration, review loop, and implementation handoff. Use when the user asks to design a new page, evolve an existing UI, extract a project's design system, review a visual artifact, or prepare a design-to-implementation handoff for web, Flutter, or HTML-native work.
+description: Noootwo Design turns a rough design request into a reusable design system, explicit 3-direction exploration, review loop, and implementation handoff. Use when the user asks to design a new page, evolve an existing UI, extract a project's design system, review a visual artifact, or prepare a design-to-implementation handoff for web, Flutter, or HTML-native work.
 license: MIT
 ---
 
@@ -8,7 +8,7 @@ license: MIT
 
 Type once, get a design worth shipping.
 
-Noootwo Design is not a generic frontend helper. It is a design partner that establishes a design system before task work, explores clear art directions before committing, separates generation from evaluation, and only hands work off after it has passed review.
+Noootwo Design is not a generic frontend helper. It is a design partner that establishes a design system before task work, explicitly presents 3 strong art directions before drafting, uses a first-draft then critique loop, and only hands work off after it has passed review.
 
 ## Use This Skill For
 
@@ -75,25 +75,30 @@ If a task spans multiple modes, execute them in this order:
 
 - Expand the current task into `.noootwo/brief.md`
 - Capture audience, desired outcome, constraints, non-goals, and success criteria
+- Capture tone extreme, aesthetic ambition, novelty target, motion appetite, brand-safety tolerance, one unforgettable thing, and what the result must or must not feel like
+- If the user does not specify these, write explicit defaults instead of silently choosing a conservative path
 - Keep the brief strategic. Do not lock implementation details too early
 - See [brief-expansion.md](references/brief-expansion.md)
 
 ### 4. Direction Exploration
 
-- For new design work, ambiguous requests, or major redesigns, create 2-3 distinct directions before building
-- Default to 3 directions; use 2 only when the brief is tightly constrained and the choice is genuinely binary
-- Each direction must include a concrete lineage, typography plan, grid and density target, shape rules, image treatment, and explicit anti-patterns
+- For new design work, redesigns, and major refinements of existing surfaces, explicitly present 3 distinct directions before building
+- Only skip directions when the user clearly asks for minor polish or to stay close to the current system
+- Each direction must include a concrete lineage, a tone extreme, one unforgettable thing, typography plan, color discipline, grid and density target, shape rules, component vocabulary, motion thesis, background/detail thesis, image treatment, why it feels rare, and explicit anti-patterns
 - Recommend one default direction
 - Use [direction-exploration.md](references/direction-exploration.md)
-- Use [style-lineages.md](references/style-lineages.md) when you need fallback archetypes or a stronger point of view
-- Minor polish work or strict follow-existing-style work may skip this step only if the brief is explicit and the surface is already established
+- Use [style-lineages.md](references/style-lineages.md) by default unless the current brand system is already strong enough to support 3 clearly differentiated directions without it
+- Use [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md) to keep typography, color, motion, composition, and detail treatment coordinated
+- Show all 3 directions to the user before proceeding to draft work
+- Minor polish work or strict follow-existing-style work may skip this step only if the user explicitly says so
 
-### 5. Draft, Critique, Polish
+### 5. Direction Preflight, First Draft, Critique, Polish
 
-- After choosing a direction, declare the chosen lineage, type pairing, density target, shape language, and forbidden patterns before generating a draft
-- New surfaces or major redesigns: build a v0 draft first, then the fuller design or prototype
+- After choosing a direction, declare the chosen lineage, tone extreme, one unforgettable thing, type pairing, color discipline, density target, component vocabulary, motion thesis, background/detail thesis, and forbidden patterns before generating a draft
+- Do not start a draft if the chosen direction still lacks type contrast, density stance, component language, motion thesis, or background/detail thesis
+- New surfaces or major redesigns: build a first draft fast enough to expose direction risk, then iterate into the fuller design or prototype
 - Existing product refinements: work inside the target stack after extracting the system
-- Apply [anti-slop.md](references/anti-slop.md) and [target-stack-rules.md](references/target-stack-rules.md)
+- Apply [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md), [anti-slop.md](references/anti-slop.md), and [target-stack-rules.md](references/target-stack-rules.md)
 - Review the draft as an evaluator, not as the generator that just made it
 - Only polish after critique confirms the direction is fundamentally right
 
@@ -112,8 +117,12 @@ If a task spans multiple modes, execute them in this order:
 - Read durable memory before re-deriving context
 - Do not design from thin air if you can extract a real system
 - Establish the design system before task-specific aesthetics
-- New design work defaults to 3 directions first unless the brief is tightly constrained
+- New design work defaults to 3 explicit directions first
+- Existing-surface redesigns also default to 3 explicit directions unless the user explicitly asks for polish only
+- Every direction must answer two questions before drafting: what is the tone extreme, and what is the one unforgettable thing
 - Do not fall back to `Inter-only`, `system-only`, or generic SaaS patterns without a brand-backed reason
+- Default to strong, opinionated directions unless the user explicitly asks for a conservative path
+- Typography, color, motion, composition, and background/detail treatment must support the same point of view
 - A design is not ready without a review artifact
 - An implementation handoff is not ready without assets, acceptance criteria, and interaction notes
 - Review is based on quality, originality, craft, and functionality, not personal taste alone
@@ -127,6 +136,7 @@ If a task spans multiple modes, execute them in this order:
 - Task brief: [brief-expansion.md](references/brief-expansion.md)
 - Design directions: [direction-exploration.md](references/direction-exploration.md)
 - Fallback archetypes and lineages: [style-lineages.md](references/style-lineages.md)
+- Frontend aesthetic principles: [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md)
 - Anti-slop guardrails: [anti-slop.md](references/anti-slop.md)
 - Review scoring and loop rules: [review-rubric.md](references/review-rubric.md)
 - Handoff output: [handoff-bundle.md](references/handoff-bundle.md)

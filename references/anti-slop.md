@@ -31,6 +31,7 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
   - dense vs airy hierarchy
   - uppercase display vs sentence-case body
 - If the product needs character, do not solve it with color alone. Start with typography and rhythm.
+- If motion, color, and components do not reinforce the same point of view as the type system, the direction is incomplete.
 
 ## Density And Composition Rules
 
@@ -38,8 +39,17 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
 - Avoid turning every section into the same centered stack with the same spacing rhythm.
 - Introduce deliberate density changes between sections so the page has momentum.
 - Use stronger alignment systems than "cards floating in space".
+- Prefer unexpected layouts, overlaps, diagonals, or grid breaks when they support the chosen direction.
 - Asymmetry is useful when it clarifies hierarchy, not when it is decorative.
 - Large empty space is only valid when the product tone earns it.
+- Controlled density is as valid as generous negative space; choose one deliberately instead of drifting into neutral spacing.
+
+## Color, Motion, And Detail Rules
+
+- Dominant color with sharp accents is usually stronger than timid evenly distributed color.
+- Motion should create one or two high-impact moments, not a spray of generic micro-interactions.
+- Backgrounds should create atmosphere or depth; avoid defaulting to flat emptiness unless the direction truly earns it.
+- Component language must feel designed for the context, not inherited from a UI kit without modification.
 
 ## First-Screen Taboos
 
@@ -47,12 +57,15 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
 - Do not use centered logo, centered headline, centered paragraph, centered buttons by default.
 - Do not use fake dashboards or fake activity as the only proof of sophistication.
 - Do not let the strongest visual move be a gradient, blur, or shadow.
+- Do not let motion exist as a garnish after the layout has already settled into a generic shape.
+- Do not let the background collapse into a generic solid fill if the direction calls for texture, pattern, atmosphere, or depth.
 
 ## Self-Check
 
 Before calling a design ready, ask:
 
 - Would this still feel specific if the logo disappeared?
+- What is the one unforgettable thing in this direction?
 - Is the strongest decision typography, composition, product evidence, or all three?
 - Does the first screen avoid the default AI landing-page pattern?
 - Does this look like a product with a design system, or like a prompt artifact?

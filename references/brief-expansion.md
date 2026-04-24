@@ -16,6 +16,14 @@ The brief defines the problem, audience, and constraints. It does not prescribe 
 - `Surface or flow`
 - `Constraints`
 - `Non-goals`
+- `Tone extreme`
+- `Aesthetic ambition`
+- `Novelty target`
+- `Brand-safety tolerance`
+- `Motion appetite`
+- `One unforgettable thing`
+- `Must feel like`
+- `Must not feel like`
 - `Design objectives`
 - `Success signals`
 - `Open questions`
@@ -26,3 +34,5 @@ The brief defines the problem, audience, and constraints. It does not prescribe 
 - Separate hard constraints from preferences
 - If the user asks for "better" or "more polished", translate that into explicit design objectives
 - If the ask is ambiguous, the brief should expose the ambiguity instead of hiding it
+- If the user does not specify style ambition, default to a strong, opinionated direction and record that assumption explicitly
+- If the user does not specify a memorable move, write a provisional `one unforgettable thing` so the draft has a non-generic center of gravity

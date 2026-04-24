@@ -1,4 +1,4 @@
 interface:
   display_name: "Noootwo Design"
-  short_description: "Establish a design system, explore strong directions, critique, then hand off"
-  default_prompt: "Use $noootwo-design to establish this project's design system first, propose 2-3 clear art directions with explicit type pairing, density, and anti-patterns, build the chosen draft, critique it as a separate evaluator, and only polish or hand off after it passes review."
+  short_description: "Establish a design system, show 3 strong directions, critique, then hand off"
+  default_prompt: "Use $noootwo-design to establish this project's design system first, then explicitly show 3 strong art directions before drafting. For each direction, define tone extreme, one unforgettable thing, typography, color discipline, grid and density, component vocabulary, motion thesis, background and detail treatment, image treatment, and anti-patterns. Recommend one direction, wait for selection, then build a first draft, critique it as a separate evaluator, and only polish or hand off after it passes review."
