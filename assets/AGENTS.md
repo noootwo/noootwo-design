@@ -1,4 +1,4 @@
-# UI/Design Workflow
+## UI/Design Workflow
 
 Use `$noootwo-design` to lead all UI-related work in this project, including UI/UX design, frontend visual changes, app screens, redesigns, design reviews, and design-to-implementation handoff.
 
@@ -6,8 +6,11 @@ Read Noootwo's project design context from `.noootwo/` before making UI decision
 
 - `.noootwo/system.md`
 - `.noootwo/design-tokens.md`
+- `.noootwo/adoption.md`
 - `.noootwo/brief.md`
 - `.noootwo/style-calibration.md`
+- `.noootwo/style-discovery.md`
+- `.noootwo/reference-board.md`
 - `.noootwo/directions.md`
 - `.noootwo/review.md`
 - `.noootwo/handoff/`

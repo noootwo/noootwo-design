@@ -7,6 +7,46 @@ Status: pending; every deliverable should replace this with a real review before
 - Artifact reviewed: TBD
 - Screenshot, URL, preview, recording, or limitation: TBD
 
+## Spike Comparison
+
+- Spike count: TBD
+- Spike artifacts or screenshots reviewed: TBD
+- Selected spike and reason: TBD
+- If fewer than 2 deep-mode spikes, low-confidence limitation: TBD
+
+## Multi-Viewport Evidence
+
+- Desktop or large viewport: TBD
+- Mobile or phone viewport: TBD
+- Narrow viewport: TBD
+- Text scale or zoom check: TBD
+
+## Responsive Visual Gate
+
+- 390px or phone viewport checked: TBD
+- 768px viewport checked: TBD
+- 1440px viewport checked: TBD
+- `document.documentElement.scrollWidth > window.innerWidth` result: TBD
+- Critical text clipping or title wrapping issue: TBD
+- Navigation and primary action reachable: TBD
+
+## Typography Craft
+
+- Font choice and fallback reviewed: TBD
+- Display/body contrast reviewed: TBD
+- Type scale and weight roles reviewed: TBD
+- Line-height, letter-spacing, and line length reviewed: TBD
+- Mobile display cap and wrapping reviewed: TBD
+- Tabular numeric behavior reviewed when relevant: TBD
+
+## Impeccable Detail Check
+
+- Avoids default font fallback without reason: TBD
+- Avoids AI palette, pure black/white, and decorative gradient text: TBD
+- Uses spacing rhythm rather than equal padding everywhere: TBD
+- Avoids repeated card grids and generic centered hero structure: TBD
+- Motion supports state, continuity, emphasis, or identity: TBD
+
 ## Scores
 
 - design_quality: TBD / 35
@@ -25,7 +65,41 @@ Status: pending; every deliverable should replace this with a real review before
 
 - Generic SaaS: TBD
 - Claude-like convergence: TBD
+- Claude-ish serif + mono + dossier + status dots: TBD
 - Framework smell: TBD
+
+## Designer-Grade Failure Flags
+
+- AI gradient SaaS: TBD
+- Styled but crude: TBD
+- Unique but impractical: TBD
+- Minimal but empty: TBD
+- Fashionable but unusable: TBD
+- Efficient but generic: TBD
+- Premium cosplay: TBD
+
+## Role-Based Critique
+
+- Art Director verdict: TBD
+- Product Designer verdict: TBD
+- Stack Craftsperson verdict: TBD
+- Design Director / Evaluator verdict: TBD
+
+## Data UI Evidence
+
+- Axes, units, state, time window, action path, and exception priority checked: TBD
+
+## Readiness Gate
+
+- `.noootwo/directions.md` not pending: TBD
+- `.noootwo/review.md` not pending: TBD
+- `.noootwo/design-tokens.md` not pending: TBD
+- Required files have no unresolved `TBD`: TBD
+- Artifact evidence and decision recorded: TBD
+- Typography evidence recorded: TBD
+- Responsive evidence recorded: TBD
+- Deep-mode source evidence recorded if applicable: TBD
+- Deep-mode spike comparison recorded if applicable: TBD
 
 ## Memorable Move
 
@@ -34,6 +108,10 @@ Status: pending; every deliverable should replace this with a real review before
 ## Decision
 
 - ready, refine, pivot, or needs artifact: TBD
+
+## Return Action
+
+- return to discovery, directions, artifact, responsive pass, typography pass, stack pass, or handoff: TBD
 
 ## Highest-Leverage Fixes
 

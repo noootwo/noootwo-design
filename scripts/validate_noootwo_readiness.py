@@ -1,0 +1,171 @@
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import argparse
+import re
+from pathlib import Path
+
+
+REQUIRED_FILES = [
+    Path(".noootwo/directions.md"),
+    Path(".noootwo/review.md"),
+    Path(".noootwo/design-tokens.md"),
+]
+
+DEEP_REQUIRED_FILES = [
+    Path(".noootwo/style-discovery.md"),
+    Path(".noootwo/reference-board.md"),
+]
+
+STATUS_PENDING_RE = re.compile(r"^Status:\s*pending\b", re.IGNORECASE | re.MULTILINE)
+TBD_RE = re.compile(r"(?<!`)\bTBD\b(?!`)")
+DECISION_RE = re.compile(r"\b(ready|refine|pivot|needs artifact|not ready)\b", re.IGNORECASE)
+READY_DECISION_RE = re.compile(
+    r"(^|\n)\s*(?:-\s*)?(?:Decision\s*:\s*)?ready\s*(?:$|\n)",
+    re.IGNORECASE,
+)
+
+REQUIRED_REVIEW_SECTIONS = [
+    "artifact evidence",
+    "typography craft",
+    "responsive visual gate",
+    "decision",
+    "return action",
+]
+
+DEEP_REVIEW_SECTIONS = [
+    "spike comparison",
+]
+
+DEEP_STYLE_SECTIONS = [
+    "source accessibility",
+    "source evidence",
+    "evidence levels",
+    "rejected surfaces",
+    "fit scores",
+]
+
+
+def validate_file(target_root: Path, relative_path: Path) -> list[str]:
+    path = target_root / relative_path
+    errors: list[str] = []
+
+    if not path.exists():
+        return [f"{relative_path} is missing"]
+
+    content = path.read_text(encoding="utf-8")
+    if STATUS_PENDING_RE.search(content):
+        errors.append(f"{relative_path} is still Status: pending")
+    if TBD_RE.search(content):
+        errors.append(f"{relative_path} contains unresolved TBD placeholders")
+    if not content.strip():
+        errors.append(f"{relative_path} is empty")
+
+    return errors
+
+
+def missing_sections(content: str, sections: list[str], path_label: str) -> list[str]:
+    lower_content = content.lower()
+    return [
+        f"{path_label} is missing {section}"
+        for section in sections
+        if section not in lower_content
+    ]
+
+
+def validate_review(target_root: Path, allow_non_ready: bool, deep_mode: bool) -> list[str]:
+    review_path = target_root / ".noootwo/review.md"
+    if not review_path.exists():
+        return []
+
+    content = review_path.read_text(encoding="utf-8")
+    errors: list[str] = []
+
+    errors.extend(
+        missing_sections(content, REQUIRED_REVIEW_SECTIONS, ".noootwo/review.md")
+    )
+    if deep_mode:
+        errors.extend(
+            missing_sections(content, DEEP_REVIEW_SECTIONS, ".noootwo/review.md")
+        )
+
+    if not DECISION_RE.search(content):
+        errors.append(".noootwo/review.md does not record a review decision")
+    elif not allow_non_ready and not READY_DECISION_RE.search(content):
+        errors.append(".noootwo/review.md decision is not ready")
+
+    return errors
+
+
+def validate_deep_mode(target_root: Path) -> list[str]:
+    errors: list[str] = []
+
+    for relative_path in DEEP_REQUIRED_FILES:
+        errors.extend(validate_file(target_root, relative_path))
+
+    style_path = target_root / ".noootwo/style-discovery.md"
+    if style_path.exists():
+        style_content = style_path.read_text(encoding="utf-8")
+        errors.extend(
+            missing_sections(style_content, DEEP_STYLE_SECTIONS, ".noootwo/style-discovery.md")
+        )
+
+    reference_path = target_root / ".noootwo/reference-board.md"
+    if reference_path.exists():
+        reference_content = reference_path.read_text(encoding="utf-8")
+        errors.extend(
+            missing_sections(
+                reference_content,
+                ["source url or artifact", "borrowed mechanism", "selected mechanisms"],
+                ".noootwo/reference-board.md",
+            )
+        )
+
+    return errors
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Validate that Noootwo design deliverables are ready for handoff."
+    )
+    parser.add_argument(
+        "target",
+        nargs="?",
+        default=".",
+        help="Target project directory. Defaults to the current working directory.",
+    )
+    parser.add_argument(
+        "--allow-non-ready",
+        action="store_true",
+        help="Only validate that required Noootwo files are complete; do not require the review decision to be ready.",
+    )
+    parser.add_argument(
+        "--deep-mode",
+        action="store_true",
+        help="Also validate deep-mode style discovery, reference board, and spike comparison evidence.",
+    )
+    args = parser.parse_args()
+
+    target_root = Path(args.target).resolve()
+    errors: list[str] = []
+
+    for relative_path in REQUIRED_FILES:
+        errors.extend(validate_file(target_root, relative_path))
+
+    errors.extend(validate_review(target_root, args.allow_non_ready, args.deep_mode))
+    if args.deep_mode:
+        errors.extend(validate_deep_mode(target_root))
+
+    if errors:
+        print("Noootwo readiness validation failed:")
+        for error in errors:
+            print(f"  - {error}")
+        return 1
+
+    print("Noootwo readiness validation passed.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -39,9 +39,18 @@ Write the review to `.noootwo/review.md` with:
 - `Generic SaaS flags`
 - `Claude-like convergence flags`
 - `Framework smell flags`
+- `Designer-grade failure flags`
+- `Role-based critique`
 - `What is the memorable move`
 - `Code/design mismatch risks`
+- `Multi-viewport evidence`
+- `Responsive visual gate`
+- `Typography craft`
+- `Spike comparison` for deep mode
+- `Data UI evidence` when relevant
+- `Readiness gate result`
 - `Decision: ready, refine, pivot, or needs artifact`
+- `Return action`
 - `Highest-leverage fixes`
 - `Next action`
 
@@ -59,6 +68,45 @@ Flag the draft when it looks like:
 If 2 or more flags are present, the design cannot be marked `ready`.
 If 3 or more flags are present, or originality is structurally weak, default to `pivot`.
 
+## Designer-Grade Taste Checks
+
+Use [taste-fit-matrix.md](taste-fit-matrix.md) for deep mode and style-sensitive work.
+
+- Distinctive but not weird for its own sake
+- Niche but not cosplay
+- Practical within the user's task
+- Minimal but not empty
+- Efficient but not generic
+- Premium through proportion, type, spacing, material, and restraint
+- Fashionable through credible current signals, not stale trend skins
+
+Flag these failures:
+
+- `AI gradient SaaS`
+- `styled but crude`
+- `unique but impractical`
+- `minimal but empty`
+- `fashionable but unusable`
+- `efficient but generic`
+- `premium cosplay`
+
+Any `styled but crude`, `unique but impractical`, or `fashionable but unusable` flag prevents `ready`.
+
+## Typography Craft Checks
+
+Use [typography-craft-rubric.md](typography-craft-rubric.md).
+
+Any of these prevents `ready`:
+
+- Display headline is too heavy, clipped, or unstable on mobile.
+- Body text is below 16px on web without a valid density reason.
+- Font sizes, weights, or line heights are arbitrary instead of tokenized.
+- Monospace is used as a lazy aesthetic shortcut.
+- Display/body contrast is absent or muddy.
+- Data-heavy UI does not use tabular numbers where alignment matters.
+
+If type is promising but flawed, use `Return action: return to typography pass`.
+
 ## Style Calibration Fit
 
 - If the draft ignores the selected novelty, density, typography, motion, or brand-safety dials, it cannot be `ready`.
@@ -72,6 +120,7 @@ Flag polished outputs that still feel templated:
 
 - too many nested rounded containers without structural purpose
 - serif headline plus generic sans body plus pills/status dots with no product-specific reason
+- Claude-ish serif plus mono annotations plus dossier panels plus status dots as a replacement template
 - clean panels replacing a real layout idea
 - first screen that could describe any AI product after swapping the logo
 - handoff that loses the specific component, state, or motion decisions from the design
@@ -85,6 +134,54 @@ Flag stack-specific defaults that weaken the design:
 - SwiftUI: default list/form styling when the brief asks for a distinctive product surface
 - Jetpack Compose: default Material surfaces without token reinterpretation, no native transition or state feedback plan
 - Native apps: web landing-page structure forced into an app shell
+
+## Data UI Checks
+
+For dashboards, analytics, ops, monitoring, finance, admin panels, and metric-heavy workbenches, use [data-ui-rubric.md](data-ui-rubric.md).
+
+- If charts or metrics have no axes, units, state, time window, action path, or priority logic, the design cannot be `ready`.
+- If a workbench looks impressive but the data is decorative, default to `refine`.
+- If the surface lacks a credible operational action path, default to `pivot`.
+
+## Responsive Visual Gate
+
+Use [responsive-visual-gates.md](responsive-visual-gates.md).
+
+Before `ready`, record evidence for phone, narrow/tablet, desktop, and text scale or zoom.
+
+Any of these prevents `ready`:
+
+- `document.documentElement.scrollWidth > window.innerWidth`
+- critical headline, nav, primary action, or data clipped
+- mobile title wraps into an unreadable block
+- primary action or recovery path unreachable
+- native preview ignores safe area or text scale
+
+If the direction is good but viewport adaptation fails, use `Return action: return to responsive pass`.
+
+## Deep Mode Evidence Gate
+
+Deep mode cannot enter `ready` unless:
+
+- `.noootwo/style-discovery.md` records source accessibility, URL/artifact evidence, source levels, rejected surfaces, and fit scores.
+- `.noootwo/reference-board.md` records source mechanisms.
+- `.noootwo/review.md` records spike comparison.
+
+If 2-3 spikes were not possible, record the limitation and do not claim full exploration confidence.
+
+## Readiness Gate
+
+Before marking any non-trivial design `ready`, check:
+
+- `.noootwo/directions.md` exists and is not `Status: pending`
+- `.noootwo/review.md` exists and is not `Status: pending`
+- `.noootwo/design-tokens.md` exists and is not `Status: pending`
+- Required files do not contain unresolved `TBD` placeholders
+- `.noootwo/review.md` records artifact evidence and a decision
+- `.noootwo/review.md` records typography craft evidence
+- `.noootwo/review.md` records responsive visual evidence
+
+If this fails, the decision is `needs artifact` or `refine`, not `ready`.
 
 ## Decision Rules
 
@@ -109,6 +206,10 @@ Flag stack-specific defaults that weaken the design:
 - If the draft lacks a clear relationship to `.noootwo/style-calibration.md`, return to directions before refining
 - If the draft lacks artifact strategy, stack translation, or visual proof, return to directions or stack translation before polishing
 - If production work lacks token mapping, return to `.noootwo/design-tokens.md` before handoff
+- If readiness gate fails because required `.noootwo/` files are pending or unresolved, return to the missing file before handoff
+- If typography craft fails, return to typography pass before visual polish
+- If responsive checks fail, return to responsive pass before handoff
+- If deep source evidence or spike comparison is missing, return to discovery or artifact before drafting
 - If the direction is right but execution is weak, return to draft with concrete fixes
 - If the direction itself is generic, return to directions instead of polishing the draft
 - "Clean but ordinary" is a failure mode, not a near-ready state
@@ -121,3 +222,15 @@ Flag stack-specific defaults that weaken the design:
 - Review should separate "cleaner than before" from "distinctive enough to keep"
 - Do not let neat spacing or polished UI chrome compensate for weak originality
 - Do not spend polish loops on a direction that needs a structural pivot
+
+## Return Actions
+
+Use exactly one primary return action for non-ready work:
+
+- `return to discovery`
+- `return to directions`
+- `return to artifact`
+- `return to responsive pass`
+- `return to typography pass`
+- `return to stack pass`
+- `return to handoff`

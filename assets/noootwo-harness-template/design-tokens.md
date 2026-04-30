@@ -19,7 +19,13 @@ Status: pending; fill or refresh when a direction moves toward implementation
 - Display: TBD
 - Body: TBD
 - Mono or annotation: TBD
-- Scale and line-height: TBD
+- Scale: TBD
+- Weight roles: TBD
+- Line-height: TBD
+- Letter-spacing: TBD
+- Mobile display cap: TBD
+- Numeric alignment and tabular nums: TBD
+- Fallback and font loading: TBD
 
 ## Spacing And Layout
 

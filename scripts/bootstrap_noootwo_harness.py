@@ -3,8 +3,53 @@
 from __future__ import annotations
 
 import argparse
+import re
 import shutil
 from pathlib import Path
+
+
+AGENTS_SECTION_HEADING = "## UI/Design Workflow"
+AGENTS_SECTION_RE = re.compile(r"^(#{1,6})\s+UI/Design Workflow\s*$")
+
+
+def merge_agents_section(agents_path: Path, section_text: str) -> str:
+    section_text = section_text.strip() + "\n"
+
+    if not agents_path.exists():
+        agents_path.write_text(section_text, encoding="utf-8")
+        return "created"
+
+    existing = agents_path.read_text(encoding="utf-8")
+    lines = existing.splitlines()
+    start_index = None
+
+    section_level = 2
+    for index, line in enumerate(lines):
+        match = AGENTS_SECTION_RE.match(line.strip())
+        if match:
+            start_index = index
+            section_level = len(match.group(1))
+            break
+
+    if start_index is None:
+        prefix = existing.rstrip()
+        merged = f"{prefix}\n\n{section_text}" if prefix else section_text
+        agents_path.write_text(merged, encoding="utf-8")
+        return "appended"
+
+    end_index = len(lines)
+    for index in range(start_index + 1, len(lines)):
+        line = lines[index]
+        heading_match = re.match(r"^(#{1,6})\s+", line)
+        if heading_match and len(heading_match.group(1)) <= section_level:
+            end_index = index
+            break
+
+    replacement = section_text.rstrip().splitlines()
+    merged_lines = lines[:start_index] + replacement + lines[end_index:]
+    merged = "\n".join(merged_lines).rstrip() + "\n"
+    agents_path.write_text(merged, encoding="utf-8")
+    return "updated"
 
 
 def main() -> int:
@@ -22,15 +67,23 @@ def main() -> int:
         action="store_true",
         help="Overwrite existing files inside the destination .noootwo directory.",
     )
+    parser.add_argument(
+        "--skip-agents",
+        action="store_true",
+        help="Do not create or merge the target project's AGENTS.md UI/Design Workflow section.",
+    )
     args = parser.parse_args()
 
     package_root = Path(__file__).resolve().parent.parent
     source_root = package_root / "assets" / "noootwo-harness-template"
+    agents_template = package_root / "assets" / "AGENTS.md"
     target_root = Path(args.target).resolve()
     destination_root = target_root / ".noootwo"
 
     if not source_root.exists():
         raise SystemExit(f"Template source not found: {source_root}")
+    if not args.skip_agents and not agents_template.exists():
+        raise SystemExit(f"AGENTS template not found: {agents_template}")
 
     copied: list[Path] = []
     skipped: list[Path] = []
@@ -62,6 +115,15 @@ def main() -> int:
             print(f"  - {path}")
     if skipped and not args.force:
         print("Re-run with --force to overwrite existing files.")
+
+    if args.skip_agents:
+        print("Skipped AGENTS.md integration.")
+    else:
+        agents_status = merge_agents_section(
+            target_root / "AGENTS.md",
+            agents_template.read_text(encoding="utf-8"),
+        )
+        print(f"AGENTS.md integration: {agents_status}")
     return 0
 
 

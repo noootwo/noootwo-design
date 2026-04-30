@@ -6,13 +6,16 @@ Use this reference when installing Noootwo Design into a project workflow.
 
 Agents commonly read a root `AGENTS.md` as project context. Integrate the short `UI/Design Workflow` guidance from `assets/AGENTS.md` into the target project's root `AGENTS.md`.
 
-If the project has no `AGENTS.md`, create it from the provided template:
+The bootstrap script creates or merges this section by default:
 
 ```bash
-cp assets/AGENTS.md /path/to/project/AGENTS.md
+python scripts/bootstrap_noootwo_harness.py /path/to/project
 ```
 
-If the project already has `AGENTS.md`, merge in only the UI/design-related content from `assets/AGENTS.md`. Preserve existing project instructions and avoid overwriting unrelated sections.
+Use `--skip-agents` when the caller explicitly does not want `AGENTS.md` touched.
+
+If the project has no `AGENTS.md`, create it from `assets/AGENTS.md`.
+If the project already has `AGENTS.md`, merge in only the `## UI/Design Workflow` section from `assets/AGENTS.md`. Preserve existing project instructions and avoid overwriting unrelated sections.
 
 ## Purpose
 
@@ -22,11 +25,13 @@ The `AGENTS.md` snippet is only a project-level pointer. It tells agents that UI
 
 - Do not create custom project-guide filenames for agent context.
 - Prefer the root `AGENTS.md`.
-- Create `AGENTS.md` when it is missing.
-- Merge the `UI/Design Workflow` section when `AGENTS.md` already exists.
+- Create `AGENTS.md` when it is missing unless `--skip-agents` is used.
+- Merge the `## UI/Design Workflow` section when `AGENTS.md` already exists.
+- Make merging idempotent; repeated bootstrap runs must not duplicate the section.
 - Do not overwrite unrelated existing project instructions.
 - Keep the snippet short; do not duplicate the skill's workflow.
 - Mention `$noootwo-design` explicitly in UI/UX/frontend/app design instructions.
+- If Noootwo is introduced mid-project, record adoption baseline in `.noootwo/adoption.md` before broad redesign.
 
 ## Good Trigger Language
 
