@@ -32,27 +32,18 @@ Score the design on 100 total points:
 Write the review to `.noootwo/review.md` with:
 
 - `Status`
-- `Artifact reviewed`
 - `Artifact evidence`
-- `Screenshots reviewed`
 - `Loop`
 - `Scores`
-- `Distinctiveness audit`
+- `Style calibration fit`
 - `Generic SaaS flags`
 - `Claude-like convergence flags`
 - `Framework smell flags`
-- `What feels generic`
 - `What is the memorable move`
-- `Aesthetic coherence`
 - `Code/design mismatch risks`
-- `Token/time budget note`
-- `What works`
-- `What breaks`
 - `Decision: ready, refine, pivot, or needs artifact`
-- `Forced redo trigger`
-- `Next action: return to directions or draft`
 - `Highest-leverage fixes`
-- `Open risks`
+- `Next action`
 
 ## Generic-Risk Flags
 
@@ -67,6 +58,13 @@ Flag the draft when it looks like:
 
 If 2 or more flags are present, the design cannot be marked `ready`.
 If 3 or more flags are present, or originality is structurally weak, default to `pivot`.
+
+## Style Calibration Fit
+
+- If the draft ignores the selected novelty, density, typography, motion, or brand-safety dials, it cannot be `ready`.
+- If the direction is strong but one dial is under-expressed, default to `refine`.
+- If the artifact contradicts the calibration thesis, return to directions instead of polishing.
+- If the user changed taste direction during review, update `.noootwo/style-calibration.md` before generating a new direction.
 
 ## Claude-Like Convergence Flags
 
@@ -108,7 +106,9 @@ Flag stack-specific defaults that weaken the design:
 ## Forced Redo Rules
 
 - If the draft lacks explicit type contrast, density stance, component vocabulary, motion thesis, or background/detail thesis, return to directions before refining
+- If the draft lacks a clear relationship to `.noootwo/style-calibration.md`, return to directions before refining
 - If the draft lacks artifact strategy, stack translation, or visual proof, return to directions or stack translation before polishing
+- If production work lacks token mapping, return to `.noootwo/design-tokens.md` before handoff
 - If the direction is right but execution is weak, return to draft with concrete fixes
 - If the direction itself is generic, return to directions instead of polishing the draft
 - "Clean but ordinary" is a failure mode, not a near-ready state

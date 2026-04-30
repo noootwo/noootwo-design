@@ -37,6 +37,11 @@ Status: pending extraction; replace this template with project-specific truth be
 - Typography: TBD
 - Motion: TBD
 
+## Design Tokens
+
+- Source file: `.noootwo/design-tokens.md`
+- Token confidence: TBD
+
 ## Brand Primitives
 
 - Core colors and tokens: TBD

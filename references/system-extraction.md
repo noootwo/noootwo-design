@@ -19,6 +19,7 @@ Read [design-system-setup.md](design-system-setup.md) first when the file is mis
 - Brand primitives: colors, marks, imagery, and visual materials
 - Source of truth, extraction sources, confidence level, and missing evidence
 - Published design system rules or token/component conventions
+- Current `.noootwo/design-tokens.md` status or gaps
 - Product purpose and audience
 - Tone and writing posture
 - Type system: confirmed fonts, fallback logic, hierarchy, and contrast strategy
@@ -40,6 +41,7 @@ Read [design-system-setup.md](design-system-setup.md) first when the file is mis
 - `Confidence`
 - `Missing evidence`
 - `Published design system rules`
+- `.noootwo/design-tokens.md` status
 - `Brand primitives`
 - `Product`
 - `Audience and jobs`

@@ -42,3 +42,4 @@ The brief defines the problem, audience, and constraints. It does not prescribe 
 - If the user does not specify a memorable move, write a provisional `one unforgettable thing` so the draft has a non-generic center of gravity
 - If the user wants high-end, niche, rare, or Claude Design-like work, require visual references or select credible mechanism references from [verified-ui-casebook.md](verified-ui-casebook.md)
 - If the target stack is Flutter, SwiftUI, Compose, React, Vue, or another app framework, record the artifact expectation before direction work begins
+- If the brief contains taste adjectives but no concrete style choices, run [style-calibration.md](style-calibration.md) before direction exploration

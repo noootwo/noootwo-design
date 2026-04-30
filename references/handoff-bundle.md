@@ -21,7 +21,10 @@ Must include:
 - motion guidance
 - stack-specific implementation notes
 - artifact reviewed and review evidence
+- token mapping from `.noootwo/design-tokens.md`
+- artifact verification requirements
 - edge states: loading, empty, error, focus, disabled, hover or pressed
+- implementation risks
 - implementation priority order
 
 ## `acceptance.md`

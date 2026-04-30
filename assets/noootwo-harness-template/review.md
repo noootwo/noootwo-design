@@ -1,24 +1,11 @@
 # Design Review
 
-Status: pending; every deliverable should replace this with a real review before handoff
-
-## Artifact Reviewed
-
-- TBD
+Status: pending; every deliverable should replace this with a real review before ready/handoff
 
 ## Artifact Evidence
 
-- Live URL, file path, simulator, preview, screenshot, or substitute: TBD
-- If missing, why: TBD
-
-## Screenshots Reviewed
-
-- Viewports or devices: TBD
-- Interaction states: TBD
-
-## Loop
-
-- 0
+- Artifact reviewed: TBD
+- Screenshot, URL, preview, recording, or limitation: TBD
 
 ## Scores
 
@@ -30,49 +17,17 @@ Status: pending; every deliverable should replace this with a real review before
 - stack_native_craft: TBD / 5
 - total: TBD / 100
 
-## Distinctiveness Audit
-
-- Point of view: TBD
-- Typography and density stance: TBD
-- Why this is not generic: TBD
-
-## Generic SaaS Flags
+## Calibration Fit
 
 - TBD
 
-## Claude-Like Convergence Flags
+## Generic Flags
 
-- TBD
+- Generic SaaS: TBD
+- Claude-like convergence: TBD
+- Framework smell: TBD
 
-## Framework Smell Flags
-
-- TBD
-
-## What Feels Generic
-
-- TBD
-
-## What Is The Memorable Move
-
-- TBD
-
-## Aesthetic Coherence
-
-- TBD
-
-## Code/Design Mismatch Risks
-
-- TBD
-
-## Token/Time Budget Note
-
-- TBD
-
-## What Works
-
-- TBD
-
-## What Breaks
+## Memorable Move
 
 - TBD
 
@@ -80,18 +35,10 @@ Status: pending; every deliverable should replace this with a real review before
 
 - ready, refine, pivot, or needs artifact: TBD
 
-## Forced Redo Trigger
+## Highest-Leverage Fixes
 
 - TBD
 
 ## Next Action
 
-- return to directions, draft, stack translation, artifact, or handoff: TBD
-
-## Highest-Leverage Fixes
-
-- TBD
-
-## Open Risks
-
-- TBD
+- return to calibration, directions, draft, artifact, stack translation, or handoff: TBD

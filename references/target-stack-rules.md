@@ -15,6 +15,8 @@ Read [canvas-artifact-loop.md](canvas-artifact-loop.md) before choosing a path.
 
 Use when the design is headed into an existing browser-based product or a web prototype.
 
+Read [web-react-vue.md](stacks/web-react-vue.md).
+
 Rules:
 
 - extract tokens, routes, components, CSS variables, and existing UI vocabulary first
@@ -40,6 +42,8 @@ Rules:
 
 Use when the target app is Flutter or when Flutter will implement the approved design.
 
+Read [flutter.md](stacks/flutter.md).
+
 Rules:
 
 - do not default to text-only handoff if a Flutter artifact can be run, previewed, or screenshotted
@@ -52,6 +56,8 @@ Rules:
 ## SwiftUI Or Jetpack Compose
 
 Use when the approved design will be implemented in native iOS, macOS, Android, or Compose Multiplatform.
+
+Read [native.md](stacks/native.md).
 
 Rules:
 

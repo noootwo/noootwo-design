@@ -1,158 +1,115 @@
 ---
 name: noootwo-design
-description: Use when a user asks to design, redesign, critique, or hand off a visual UI surface; extract design system memory; or produce distinctive frontend/app design work across web, React, Vue, Flutter, SwiftUI, or Compose.
+description: Use when UI design, frontend design, visual redesign, design system extraction, artifact review, screenshot critique, React, Vue, Flutter, SwiftUI, Compose, native app UI, or implementation handoff work needs distinctive and non-generic product design.
 license: MIT
 ---
 
 # Noootwo Design
 
-Type once, get a design worth shipping.
-
-Noootwo Design is not a generic frontend helper. It is a design partner that establishes a design system before task work, gathers visual evidence, explicitly presents 3 strong art directions, builds a reviewable artifact, critiques the result, and only hands work off after it has passed review.
+Noootwo Design helps agents turn UI requests into design-system-aware, stack-aware, reviewable interface work.
 
 ## Use This Skill For
 
-- Designing a new page, flow, prototype, screen, or workbench
-- Extracting a project's design system from code, screenshots, or live product surfaces
-- Reviewing an existing visual artifact and deciding whether it is ready, needs refinement, or should pivot
-- Producing an implementation handoff for Claude Code, Codex, Cursor, or another agent
-- Translating an approved direction into web, React, Vue, Flutter, SwiftUI, Jetpack Compose, or HTML-native artifact work
+- New UI pages, app screens, flows, dashboards, workbenches, landing pages, and prototypes
+- Visual redesign, UI polish, layout improvement, typography, motion, or art direction
+- React, Vue, web, Flutter, SwiftUI, Jetpack Compose, or native app visual work
+- Extracting or refreshing `.noootwo/` design system memory
+- Reviewing screenshots, prototypes, previews, or artifacts for `ready`, `refine`, `pivot`, or `needs artifact`
+- Preparing design-to-implementation handoff
 
-Do not use this skill for non-visual back-end work, CLI tools, or pure bug fixing without a design question.
+Do not use this for non-visual backend work, CLI tasks, pure logic bug fixes, or refactors with no UI impact.
 
-## Harness Contract
+## Project Context
 
-Noootwo Design persists project context in `.noootwo/`.
+Noootwo stores durable project context in `.noootwo/`. If missing, bootstrap from `assets/noootwo-harness-template/` or run `python scripts/bootstrap_noootwo_harness.py`.
 
-If `.noootwo/` does not exist yet, bootstrap it from `assets/noootwo-harness-template/` or run `python scripts/bootstrap_noootwo_harness.py`.
-
-Always read these files first when they exist:
+Read existing files before re-deriving context:
 
 - `.noootwo/system.md`
+- `.noootwo/design-tokens.md`
 - `.noootwo/product-facts.md`
 - `.noootwo/brief.md`
+- `.noootwo/style-calibration.md`
 - `.noootwo/directions.md`
 - `.noootwo/review.md`
 - `.noootwo/handoff/implementation.md`
 - `.noootwo/handoff/acceptance.md`
 - `.noootwo/handoff/assets.md`
 
-If a file is missing, stale, or marked `Status: pending`, refresh it before relying on it. Treat these files as the durable truth between sessions.
+If a file is missing, stale, or `Status: pending`, refresh only what the selected mode needs.
 
 ## Mode Routing
 
-Pick one primary mode before you work:
+Pick one mode first. Do not run the full deep flow by default.
 
-- `design`: New surface, redesign, prototype, or direction exploration
-- `extract-system`: Build or refresh `.noootwo/system.md`
-- `review`: Critique an existing artifact and decide `ready`, `refine`, or `pivot`
-- `handoff`: Convert an approved design into `.noootwo/handoff/*`
+- `quick`: Minor UI polish, small layout fixes, copy/spacing/type refinement, or "stay close to current style".
+- `standard`: Default for new UI or ordinary redesign. Use light style calibration, 3 directions, artifact review.
+- `deep`: High-end, niche, rare, experimental, brand-heavy, Claude Design-like, or major redesign work. Use visual references, casebook mechanisms, calibration, 3 directions, artifact loop.
+- `production`: Approved design going into implementation. Focus on design tokens, target stack mapping, screenshots/previews, and handoff.
+- `extract-system`: Build or refresh `.noootwo/system.md` and `.noootwo/design-tokens.md`.
+- `review`: Critique an existing artifact and decide `ready`, `refine`, `pivot`, or `needs artifact`.
 
-If a task spans multiple modes, execute them in this order:
+If a task spans modes, use this order: `extract-system -> quick/standard/deep -> review -> production`.
 
-1. `extract-system`
-2. `design`
-3. `review`
-4. `handoff`
+## Mode Workflows
 
-## Core Workflow
+### Quick
 
-### 1. Context Intake
+- Read current UI, `.noootwo/system.md`, and `.noootwo/design-tokens.md` when available.
+- Skip full style calibration and 3 directions unless the user asks.
+- Make the smallest visual improvement that preserves the existing system.
+- Use artifact evidence when available; otherwise state the limitation.
 
-- Read the user's request, current repo, existing UI, and `.noootwo/*`
-- If the task names a specific brand, product, feature launch, or versioned technology, read [fact-first.md](references/fact-first.md) before anything else
-- If the request depends on brand assets, read [asset-protocol.md](references/asset-protocol.md)
-- Read [claude-design-principles.md](references/claude-design-principles.md) for the operating model when the user asks for Claude Design-like behavior, stronger originality, or less generic UI
-- Read [target-stack-rules.md](references/target-stack-rules.md) early enough to know whether the deliverable should be a browser artifact, Flutter artifact, native preview, HTML prototype, or handoff-only fallback
+### Standard
 
-### 2. Design System Setup
+- Refresh system facts if needed.
+- Write or update a short brief.
+- Run lightweight style calibration from [style-calibration.md](references/style-calibration.md).
+- Present 3 materially different directions using [direction-exploration.md](references/direction-exploration.md).
+- Build the fastest reviewable artifact for the target stack.
+- Review with [review-rubric.md](references/review-rubric.md).
 
-- Read `.noootwo/system.md` first
-- If it is absent or incomplete, establish it before any task-specific design work
-- Use [design-system-setup.md](references/design-system-setup.md) for source order and confirmation rules
-- Use [system-extraction.md](references/system-extraction.md) to capture concrete design-system memory
-- Update `.noootwo/system.md` with brand primitives, type system, component patterns, layout density, motion language, source of truth, extraction sources, confidence, missing evidence, published design system rules, known generic fallbacks, and forbidden combinations
-- Mark inferred values as inferred; do not present them as confirmed brand truth
+### Deep
 
-### 3. Visual Reference And Brief Expansion
+- Use [claude-design-principles.md](references/claude-design-principles.md), [verified-ui-casebook.md](references/verified-ui-casebook.md), [style-lineages.md](references/style-lineages.md), and [anti-slop.md](references/anti-slop.md).
+- Gather visual references or record the gap explicitly.
+- Run style calibration before directions.
+- Require 3 directions with different type, density, composition, component language, motion, and artifact strategy.
+- Do not polish a generic direction. Pivot.
 
-- Expand the current task into `.noootwo/brief.md`
-- Capture audience, desired outcome, constraints, non-goals, and success criteria
-- Capture tone extreme, aesthetic ambition, novelty target, motion appetite, brand-safety tolerance, one unforgettable thing, and what the result must or must not feel like
-- Capture artifact expectation, reference sources, stack constraints, and allowed implementation complexity
-- Use [verified-ui-casebook.md](references/verified-ui-casebook.md) when the user asks for high-end, niche, rare, Claude Design-like, or unusually polished UI
-- If no strong visual references exist, record that gap and choose the closest credible mechanism reference instead of inventing style from adjectives alone
-- If the user does not specify these, write explicit defaults instead of silently choosing a conservative path
-- Keep the brief strategic. Do not lock implementation details too early
-- See [brief-expansion.md](references/brief-expansion.md)
+### Production
 
-### 4. Direction Exploration
+- Convert the chosen direction into `.noootwo/design-tokens.md`.
+- Use the relevant stack playbook:
+  - Web, React, Vue, Nuxt: [web-react-vue.md](references/stacks/web-react-vue.md)
+  - Flutter: [flutter.md](references/stacks/flutter.md)
+  - SwiftUI, Jetpack Compose, native: [native.md](references/stacks/native.md)
+- Produce implementation notes, token mapping, artifact verification, states, risks, and acceptance criteria.
 
-- For new design work, redesigns, and major refinements of existing surfaces, explicitly present 3 distinct directions before building
-- Only skip directions when the user clearly asks for minor polish or to stay close to the current system
-- Each direction must include a concrete lineage, a tone extreme, one unforgettable thing, typography plan, color discipline, grid and density target, shape rules, component vocabulary, motion thesis, background/detail thesis, image treatment, artifact strategy, stack translation, required visual proof, why it feels rare, and explicit anti-patterns
-- Recommend one default direction
-- Use [direction-exploration.md](references/direction-exploration.md)
-- Use [style-lineages.md](references/style-lineages.md) by default unless the current brand system is already strong enough to support 3 clearly differentiated directions without it
-- Use [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md) to keep typography, color, motion, composition, and detail treatment coordinated
-- Show all 3 directions to the user before proceeding to draft work
-- Minor polish work or strict follow-existing-style work may skip this step only if the user explicitly says so
+### Review
 
-### 5. Direction Preflight, First Artifact, Critique, Polish
-
-- After choosing a direction, declare the chosen lineage, tone extreme, one unforgettable thing, type pairing, color discipline, density target, component vocabulary, motion thesis, background/detail thesis, and forbidden patterns before generating a draft
-- Also declare the artifact strategy: browser page, target-stack implementation, simulator preview, screenshot set, HTML-native prototype, or handoff-only fallback
-- Do not start a draft if the chosen direction still lacks type contrast, density stance, component language, motion thesis, background/detail thesis, stack translation, or artifact strategy
-- New surfaces or major redesigns: build a first artifact fast enough to expose direction risk, then iterate into the fuller design or prototype
-- Existing product refinements: work inside the target stack after extracting the system
-- Apply [canvas-artifact-loop.md](references/canvas-artifact-loop.md), [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md), [anti-slop.md](references/anti-slop.md), and [target-stack-rules.md](references/target-stack-rules.md)
-- Review the draft as an evaluator, not as the generator that just made it
-- Only polish after critique confirms the direction is fundamentally right
-
-### 6. Independent Review And Handoff
-
-- Every design deliverable must go through review before it is considered ready
-- Review the lived artifact whenever possible: screenshot, browser page, simulator preview, target-stack prototype, or recorded interaction
-- Use [review-rubric.md](references/review-rubric.md)
-- Decide `ready`, `refine`, `pivot`, or `needs artifact`
-- Run at most 2 full review loops before surfacing the trade-off to the user
-- If no artifact can be produced, record the blocker and mark the review `needs artifact` unless the user explicitly accepts a handoff-only result
-- If the result is meant to be implemented and has passed review, produce `.noootwo/handoff/implementation.md`, `.noootwo/handoff/acceptance.md`, and `.noootwo/handoff/assets.md`
-- Use [handoff-bundle.md](references/handoff-bundle.md)
+- Prefer the lived artifact: screenshot, running page, simulator preview, target-stack prototype, or recorded interaction.
+- If no artifact evidence exists, mark `needs artifact` unless the user explicitly accepts the limitation.
+- Judge design quality and originality separately from cleanliness.
 
 ## Hard Rules
 
-- Fact verification outranks intuition. Never guess the status, existence, or version of a named product or technology
-- Read durable memory before re-deriving context
-- Do not design from thin air if you can extract a real system
-- Establish the design system before task-specific aesthetics
-- Visual evidence beats style adjectives
-- New design work defaults to 3 explicit directions first
-- Existing-surface redesigns also default to 3 explicit directions unless the user explicitly asks for polish only
-- Every direction must answer two questions before drafting: what is the tone extreme, and what is the one unforgettable thing
-- Every direction must declare the artifact strategy and stack translation before drafting
-- Do not fall back to `Inter-only`, `system-only`, or generic SaaS patterns without a brand-backed reason
-- Default to strong, opinionated directions unless the user explicitly asks for a conservative path
-- Typography, color, motion, composition, and background/detail treatment must support the same point of view
-- A design is not ready without artifact evidence or an explicit user-accepted artifact limitation
-- An implementation handoff is not ready without assets, acceptance criteria, and interaction notes
-- Review is based on quality, originality, craft, and functionality, not personal taste alone
-- Handoff must preserve design intent, component naming, states, motion decisions, and implementation risks
+- Establish design system truth before inventing aesthetics.
+- Visual evidence beats style adjectives.
+- Use standard `AGENTS.md` project guidance when present; if it says to use `$noootwo-design` for UI work, follow it.
+- Do not ask users to fill long style questionnaires. Recommend a calibration and proceed if they do not choose.
+- Do not default to `Inter-only`, `system-only`, `hero + cards`, generic shadcn-like UI, or Flutter `Scaffold + AppBar + Card + ListView` without a product reason.
+- Every non-trivial design must declare artifact strategy and stack translation before implementation.
+- A design is not `ready` without artifact evidence or an explicit artifact limitation.
+- Handoff must preserve design intent, tokens, component naming, states, motion decisions, artifact verification, and implementation risks.
 
 ## Reference Map
 
-- Claude Design operating model: [claude-design-principles.md](references/claude-design-principles.md)
-- Evidence-backed case mechanisms: [verified-ui-casebook.md](references/verified-ui-casebook.md)
-- Artifact and screenshot loop: [canvas-artifact-loop.md](references/canvas-artifact-loop.md)
-- Facts and brand reality: [fact-first.md](references/fact-first.md)
-- Asset sourcing and recording: [asset-protocol.md](references/asset-protocol.md)
-- Design system setup: [design-system-setup.md](references/design-system-setup.md)
-- Persistent system memory: [system-extraction.md](references/system-extraction.md)
-- Task brief: [brief-expansion.md](references/brief-expansion.md)
-- Design directions: [direction-exploration.md](references/direction-exploration.md)
-- Fallback archetypes and lineages: [style-lineages.md](references/style-lineages.md)
-- Frontend aesthetic principles: [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md)
-- Anti-slop guardrails: [anti-slop.md](references/anti-slop.md)
-- Review scoring and loop rules: [review-rubric.md](references/review-rubric.md)
-- Handoff output: [handoff-bundle.md](references/handoff-bundle.md)
-- Stack-specific execution: [target-stack-rules.md](references/target-stack-rules.md)
+- Project integration: [project-integration.md](references/project-integration.md)
+- Facts and assets: [fact-first.md](references/fact-first.md), [asset-protocol.md](references/asset-protocol.md)
+- System and tokens: [design-system-setup.md](references/design-system-setup.md), [system-extraction.md](references/system-extraction.md)
+- Brief and style: [brief-expansion.md](references/brief-expansion.md), [style-calibration.md](references/style-calibration.md)
+- Directions and aesthetics: [direction-exploration.md](references/direction-exploration.md), [style-lineages.md](references/style-lineages.md), [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md), [anti-slop.md](references/anti-slop.md)
+- Claude Design alignment: [claude-design-principles.md](references/claude-design-principles.md), [verified-ui-casebook.md](references/verified-ui-casebook.md)
+- Artifact and stacks: [canvas-artifact-loop.md](references/canvas-artifact-loop.md), [target-stack-rules.md](references/target-stack-rules.md), [web-react-vue.md](references/stacks/web-react-vue.md), [flutter.md](references/stacks/flutter.md), [native.md](references/stacks/native.md)
+- Review and handoff: [review-rubric.md](references/review-rubric.md), [handoff-bundle.md](references/handoff-bundle.md)

@@ -20,6 +20,10 @@ Status: pending; define completion checks for the implementation agent
 - Required states: TBD
 - Visual proof location: TBD
 
+## Token Checks
+
+- Color, type, spacing, surface, shape, and motion tokens applied: TBD
+
 ## Accessibility And Clarity Checks
 
 - TBD

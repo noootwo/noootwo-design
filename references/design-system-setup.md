@@ -29,6 +29,7 @@ Update `.noootwo/system.md` with:
 - `Confidence`
 - `Missing evidence`
 - `Published design system rules`
+- `.noootwo/design-tokens.md` status
 - `Brand primitives`
 - `Product`
 - `Audience and jobs`
@@ -56,3 +57,4 @@ Update `.noootwo/system.md` with:
 - Keep task-specific experiments out of the design system memory unless they are promoted into durable truth
 - Record the generic fallbacks that repeatedly weaken outputs for this product
 - If screenshots or code disagree with a generated system summary, prefer the actual artifact and record the conflict
+- When implementation is likely, refresh `.noootwo/design-tokens.md` instead of leaving style choices only in prose

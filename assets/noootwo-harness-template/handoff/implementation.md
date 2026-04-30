@@ -14,11 +14,22 @@ Status: pending; fill this after a design direction has passed review
 
 - TBD
 
+## Style Calibration
+
+- Selected calibration: TBD
+- Dials that must survive implementation: TBD
+- What this rules out: TBD
+
+## Token Mapping
+
+- Source: `.noootwo/design-tokens.md`
+- Target stack mapping: TBD
+
 ## Artifact Reviewed
 
 - TBD
 
-## Review Evidence
+## Artifact Verification
 
 - Screenshot, preview, URL, or accepted limitation: TBD
 
@@ -48,6 +59,10 @@ Status: pending; fill this after a design direction has passed review
 - TBD
 
 ## Stack-Specific Notes
+
+- TBD
+
+## Implementation Risks
 
 - TBD
 

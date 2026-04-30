@@ -5,6 +5,7 @@ Use this reference to keep design directions bold, coordinated, and memorable.
 ## Core Premise
 
 - Pick a clear aesthetic direction before drafting
+- Calibrate the style target before generating directions when the taste target is ambiguous
 - Commit to a strong point of view rather than averaging multiple safe choices
 - Every direction should answer: what is the one unforgettable thing?
 - When the user asks for high-end or niche UI, ground the direction in visual references or verified mechanisms, not abstract adjectives alone
@@ -26,6 +27,7 @@ If these do not point toward the same mood, the design is not ready.
 ## Direction Rules
 
 - Choose a tone extreme, not a vague middle
+- Tie the direction back to the chosen style calibration dials
 - Distinguish directions through structure, density, motion, and detail treatment, not just palette changes
 - Make the first screen feel authored for the product, not assembled from common SaaS modules
 - Declare the artifact strategy and stack-native design move before drafting
@@ -54,6 +56,7 @@ Avoid these unless the brand explicitly requires them:
 Before entering draft mode, confirm:
 
 - What is the tone extreme?
+- Which style calibration does this direction inherit?
 - What is the one unforgettable thing?
 - What is the typography contrast?
 - What is the motion thesis?

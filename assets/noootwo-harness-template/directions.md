@@ -1,106 +1,50 @@
 # Design Directions
 
-Status: pending; generate this file for new or ambiguous design work
+Status: pending; generate for standard or deep design work
 
 ## Recommended Direction
 
 - TBD
 
-## Why It Is The Default
-
-- TBD
-
-## Why The Other Directions Were Not Chosen By Default
-
-- TBD
-
-## When To Pivot Away
+## Why This Recommendation
 
 - TBD
 
 ## Direction 1
 
 - Name: TBD
-- Lineage: TBD
-- Tone extreme: TBD
+- Calibration relationship: TBD
+- Lineage and tone extreme: TBD
 - One unforgettable thing: TBD
-- Design philosophy: TBD
-- Visual tone: TBD
-- Typography: TBD
-- Color discipline: TBD
-- Grid and density: TBD
-- Shape rules: TBD
-- Component vocabulary: TBD
-- Motion thesis: TBD
-- Background/detail thesis: TBD
-- Artifact strategy: TBD
-- Stack translation: TBD
-- Signature stack-native move: TBD
-- Required visual proof: TBD
-- Unsupported effects or risks: TBD
-- Motion and interaction language: TBD
-- Contrast strategy: TBD
-- Image treatment: TBD
+- Type, color, and density: TBD
+- Component and shape language: TBD
+- Motion and interaction thesis: TBD
+- Artifact strategy and stack translation: TBD
 - Why it feels rare: TBD
-- Why it fits: TBD
-- Main risks: TBD
-- Borrow from current system: TBD
 - What must never happen: TBD
 
 ## Direction 2
 
 - Name: TBD
-- Lineage: TBD
-- Tone extreme: TBD
+- Calibration relationship: TBD
+- Lineage and tone extreme: TBD
 - One unforgettable thing: TBD
-- Design philosophy: TBD
-- Visual tone: TBD
-- Typography: TBD
-- Color discipline: TBD
-- Grid and density: TBD
-- Shape rules: TBD
-- Component vocabulary: TBD
-- Motion thesis: TBD
-- Background/detail thesis: TBD
-- Artifact strategy: TBD
-- Stack translation: TBD
-- Signature stack-native move: TBD
-- Required visual proof: TBD
-- Unsupported effects or risks: TBD
-- Motion and interaction language: TBD
-- Contrast strategy: TBD
-- Image treatment: TBD
+- Type, color, and density: TBD
+- Component and shape language: TBD
+- Motion and interaction thesis: TBD
+- Artifact strategy and stack translation: TBD
 - Why it feels rare: TBD
-- Why it fits: TBD
-- Main risks: TBD
-- Borrow from current system: TBD
 - What must never happen: TBD
 
 ## Direction 3
 
 - Name: TBD
-- Lineage: TBD
-- Tone extreme: TBD
+- Calibration relationship: TBD
+- Lineage and tone extreme: TBD
 - One unforgettable thing: TBD
-- Design philosophy: TBD
-- Visual tone: TBD
-- Typography: TBD
-- Color discipline: TBD
-- Grid and density: TBD
-- Shape rules: TBD
-- Component vocabulary: TBD
-- Motion thesis: TBD
-- Background/detail thesis: TBD
-- Artifact strategy: TBD
-- Stack translation: TBD
-- Signature stack-native move: TBD
-- Required visual proof: TBD
-- Unsupported effects or risks: TBD
-- Motion and interaction language: TBD
-- Contrast strategy: TBD
-- Image treatment: TBD
+- Type, color, and density: TBD
+- Component and shape language: TBD
+- Motion and interaction thesis: TBD
+- Artifact strategy and stack translation: TBD
 - Why it feels rare: TBD
-- Why it fits: TBD
-- Main risks: TBD
-- Borrow from current system: TBD
 - What must never happen: TBD
