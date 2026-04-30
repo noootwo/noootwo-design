@@ -7,6 +7,8 @@ Use this reference to keep design directions bold, coordinated, and memorable.
 - Pick a clear aesthetic direction before drafting
 - Commit to a strong point of view rather than averaging multiple safe choices
 - Every direction should answer: what is the one unforgettable thing?
+- When the user asks for high-end or niche UI, ground the direction in visual references or verified mechanisms, not abstract adjectives alone
+- The final judgment must happen against an artifact, screenshot, or preview whenever possible
 
 ## What Must Work Together
 
@@ -26,6 +28,7 @@ If these do not point toward the same mood, the design is not ready.
 - Choose a tone extreme, not a vague middle
 - Distinguish directions through structure, density, motion, and detail treatment, not just palette changes
 - Make the first screen feel authored for the product, not assembled from common SaaS modules
+- Declare the artifact strategy and stack-native design move before drafting
 
 ## High-Value Aesthetic Moves
 
@@ -56,3 +59,5 @@ Before entering draft mode, confirm:
 - What is the motion thesis?
 - What is the background/detail thesis?
 - What makes the component language specific to this product?
+- What artifact will prove the design works?
+- What stack-native primitive carries the direction?

@@ -39,6 +39,11 @@ Each direction must include:
 - `Component vocabulary`
 - `Motion thesis`
 - `Background/detail thesis`
+- `Artifact strategy`
+- `Stack translation`
+- `Signature stack-native move`
+- `Required visual proof`
+- `Unsupported effects or risks`
 - `Motion and interaction language`
 - `Contrast strategy`
 - `Image treatment`
@@ -59,10 +64,13 @@ Also include:
 - Directions must be materially different in type, structure, density, and mood
 - Directions must also be materially different in motion language and component vocabulary
 - Directions must also be materially different in background/detail treatment and first-screen structure
+- Directions must also be materially different in artifact strategy when the target stack allows multiple valid approaches
 - Avoid 3 color swaps of the same layout
 - Name directions like creative treatments or products, not generic labels like "Option A"
 - If the current system is strong, keep at least one direction close to it
 - Every direction must declare the type pairing and the density target explicitly
 - Every direction must name the generic fallback patterns it is avoiding
+- Every direction must name how it will become reviewable: browser screenshot, target-stack preview, simulator screenshot, recorded interaction, or fallback prototype
 - Every direction must be understandable and selectable by the user, not just by the model
 - If 3 directions share the same opening structure or component skeleton, the exploration is invalid and must be redone
+- If 3 directions require the same stack-native mechanism, explain why that mechanism is intrinsic to the product rather than a repeated template

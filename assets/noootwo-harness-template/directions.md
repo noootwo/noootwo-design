@@ -33,6 +33,11 @@ Status: pending; generate this file for new or ambiguous design work
 - Component vocabulary: TBD
 - Motion thesis: TBD
 - Background/detail thesis: TBD
+- Artifact strategy: TBD
+- Stack translation: TBD
+- Signature stack-native move: TBD
+- Required visual proof: TBD
+- Unsupported effects or risks: TBD
 - Motion and interaction language: TBD
 - Contrast strategy: TBD
 - Image treatment: TBD
@@ -57,6 +62,11 @@ Status: pending; generate this file for new or ambiguous design work
 - Component vocabulary: TBD
 - Motion thesis: TBD
 - Background/detail thesis: TBD
+- Artifact strategy: TBD
+- Stack translation: TBD
+- Signature stack-native move: TBD
+- Required visual proof: TBD
+- Unsupported effects or risks: TBD
 - Motion and interaction language: TBD
 - Contrast strategy: TBD
 - Image treatment: TBD
@@ -81,6 +91,11 @@ Status: pending; generate this file for new or ambiguous design work
 - Component vocabulary: TBD
 - Motion thesis: TBD
 - Background/detail thesis: TBD
+- Artifact strategy: TBD
+- Stack translation: TBD
+- Signature stack-native move: TBD
+- Required visual proof: TBD
+- Unsupported effects or risks: TBD
 - Motion and interaction language: TBD
 - Contrast strategy: TBD
 - Image treatment: TBD

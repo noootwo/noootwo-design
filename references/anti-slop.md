@@ -50,6 +50,8 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
 - Motion should create one or two high-impact moments, not a spray of generic micro-interactions.
 - Backgrounds should create atmosphere or depth; avoid defaulting to flat emptiness unless the direction truly earns it.
 - Component language must feel designed for the context, not inherited from a UI kit without modification.
+- Stack-native primitives should carry the direction; do not force every framework into the same web-card layout.
+- A screenshot-free design review is not enough for ready status unless the user explicitly accepted an artifact limitation.
 
 ## First-Screen Taboos
 
@@ -59,6 +61,7 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
 - Do not let the strongest visual move be a gradient, blur, or shadow.
 - Do not let motion exist as a garnish after the layout has already settled into a generic shape.
 - Do not let the background collapse into a generic solid fill if the direction calls for texture, pattern, atmosphere, or depth.
+- Do not let Claude-like polish become the style: nested containers, pills, status dots, and tasteful serif headlines are not a point of view by themselves.
 
 ## Self-Check
 
@@ -69,3 +72,4 @@ Before calling a design ready, ask:
 - Is the strongest decision typography, composition, product evidence, or all three?
 - Does the first screen avoid the default AI landing-page pattern?
 - Does this look like a product with a design system, or like a prompt artifact?
+- Was this judged from a rendered artifact, screenshot, preview, or an explicit artifact limitation?

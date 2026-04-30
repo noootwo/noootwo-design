@@ -22,6 +22,27 @@ Status: pending; overwrite this file for the current active design task
 
 - TBD
 
+## Artifact Expectation
+
+- Target artifact: browser page, target-stack implementation, simulator preview, screenshot set, HTML-native prototype, or handoff-only fallback: TBD
+- Review evidence required: TBD
+
+## Reference Sources
+
+- Product screenshots or live surfaces: TBD
+- Visual references or case mechanisms: TBD
+- References that must not be copied directly: TBD
+
+## Stack Constraints
+
+- Target stack: TBD
+- Existing components or tokens: TBD
+- Runtime or preview constraints: TBD
+
+## Allowed Implementation Complexity
+
+- Default: enough complexity to express the chosen art direction; avoid expensive effects unless they carry the concept
+
 ## Constraints
 
 - TBD

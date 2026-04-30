@@ -14,6 +14,10 @@ The brief defines the problem, audience, and constraints. It does not prescribe 
 - `Primary job to be done`
 - `Desired outcome`
 - `Surface or flow`
+- `Artifact expectation`
+- `Reference sources`
+- `Stack constraints`
+- `Allowed implementation complexity`
 - `Constraints`
 - `Non-goals`
 - `Tone extreme`
@@ -36,3 +40,5 @@ The brief defines the problem, audience, and constraints. It does not prescribe 
 - If the ask is ambiguous, the brief should expose the ambiguity instead of hiding it
 - If the user does not specify style ambition, default to a strong, opinionated direction and record that assumption explicitly
 - If the user does not specify a memorable move, write a provisional `one unforgettable thing` so the draft has a non-generic center of gravity
+- If the user wants high-end, niche, rare, or Claude Design-like work, require visual references or select credible mechanism references from [verified-ui-casebook.md](verified-ui-casebook.md)
+- If the target stack is Flutter, SwiftUI, Compose, React, Vue, or another app framework, record the artifact expectation before direction work begins

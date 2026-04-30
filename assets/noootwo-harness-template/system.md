@@ -7,6 +7,36 @@ Status: pending extraction; replace this template with project-specific truth be
 - Sources: TBD
 - Confirmed vs inferred: TBD
 
+## Source Of Truth
+
+- Primary source: TBD
+- Secondary sources: TBD
+- Conflicts or overrides: TBD
+
+## Extracted From
+
+- Code or tokens: TBD
+- Screenshots or live product: TBD
+- Design files, decks, or brand assets: TBD
+- User-provided references: TBD
+
+## Confidence
+
+- Confirmed: TBD
+- Inferred: TBD
+- Missing: TBD
+
+## Missing Evidence
+
+- TBD
+
+## Published Design System Rules
+
+- Tokens: TBD
+- Components: TBD
+- Typography: TBD
+- Motion: TBD
+
 ## Brand Primitives
 
 - Core colors and tokens: TBD
@@ -59,9 +89,20 @@ Status: pending extraction; replace this template with project-specific truth be
 
 ## Platform Constraints
 
+- Target stack: TBD
+- Rendering surface: TBD
+- Stack-native component vocabulary: TBD
+- Interaction grammar: TBD
+- Motion primitives: TBD
 - Target platforms: TBD
 - Accessibility constraints: TBD
 - Technical constraints: TBD
+
+## Visual Reference Library
+
+- References reviewed: TBD
+- What each reference may influence: TBD
+- What must not be copied: TBD
 
 ## Known Generic Fallbacks
 

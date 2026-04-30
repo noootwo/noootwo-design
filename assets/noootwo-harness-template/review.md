@@ -6,6 +6,16 @@ Status: pending; every deliverable should replace this with a real review before
 
 - TBD
 
+## Artifact Evidence
+
+- Live URL, file path, simulator, preview, screenshot, or substitute: TBD
+- If missing, why: TBD
+
+## Screenshots Reviewed
+
+- Viewports or devices: TBD
+- Interaction states: TBD
+
 ## Loop
 
 - 0
@@ -14,8 +24,10 @@ Status: pending; every deliverable should replace this with a real review before
 
 - design_quality: TBD / 35
 - originality: TBD / 30
-- craft: TBD / 20
-- functionality: TBD / 15
+- craft: TBD / 15
+- functionality: TBD / 10
+- artifact_evidence: TBD / 5
+- stack_native_craft: TBD / 5
 - total: TBD / 100
 
 ## Distinctiveness Audit
@@ -25,6 +37,14 @@ Status: pending; every deliverable should replace this with a real review before
 - Why this is not generic: TBD
 
 ## Generic SaaS Flags
+
+- TBD
+
+## Claude-Like Convergence Flags
+
+- TBD
+
+## Framework Smell Flags
 
 - TBD
 
@@ -40,6 +60,14 @@ Status: pending; every deliverable should replace this with a real review before
 
 - TBD
 
+## Code/Design Mismatch Risks
+
+- TBD
+
+## Token/Time Budget Note
+
+- TBD
+
 ## What Works
 
 - TBD
@@ -50,7 +78,7 @@ Status: pending; every deliverable should replace this with a real review before
 
 ## Decision
 
-- ready, refine, or pivot: TBD
+- ready, refine, pivot, or needs artifact: TBD
 
 ## Forced Redo Trigger
 
@@ -58,7 +86,7 @@ Status: pending; every deliverable should replace this with a real review before
 
 ## Next Action
 
-- return to directions or draft: TBD
+- return to directions, draft, stack translation, artifact, or handoff: TBD
 
 ## Highest-Leverage Fixes
 
