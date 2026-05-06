@@ -13,7 +13,9 @@ Use this to prevent Noootwo Design from becoming too expensive for ordinary UI w
 ## Cost Controls
 
 - Do not run deep mode just because a task is visual.
+- Do not add a new mode for full redesign. Use the full redesign checkpoint inside `deep` or `adopt-project -> deep`.
 - If the user asks for minor polish or to preserve the current system, use `quick`.
+- If the user asks to redo all UI or abandon the current visual language, the cost of discovery and user direction selection is intentional. Stop at the direction menu before implementation.
 - If time or environment blocks source mining, screenshots, or target-stack previews, record the limitation and reduce readiness confidence.
 - If only 1 deep spike is possible, mark the exploration as low-confidence and do not claim full territory comparison.
 - Prefer existing project preview tools before adding new dependencies.

@@ -20,6 +20,17 @@ Status: pending; fill this after a design direction has passed review
 - Dials that must survive implementation: TBD
 - What this rules out: TBD
 
+## Design Spec Snapshot
+
+- Color roles: canvas TBD; surface TBD; text TBD; accent TBD; semantic TBD; data TBD
+- Typography roles: display TBD; title TBD; body TBD; label TBD; number TBD; mono or annotation TBD
+- Layout model and density: TBD
+- Shape, material, and depth rules: TBD
+- Component vocabulary: TBD
+- Motion thesis: TBD
+- Imagery, iconography, and language rules: TBD
+- Forbidden moves: TBD
+
 ## Token Mapping
 
 - Source: `.noootwo/design-tokens.md`
@@ -65,6 +76,12 @@ Status: pending; fill this after a design direction has passed review
 ## Implementation Risks
 
 - TBD
+
+## User Decisions Carried Into Implementation
+
+- Decisions confirmed by user: TBD
+- Decisions delegated to agent: TBD
+- Open decisions that still block implementation: TBD
 
 ## Implementation Priority Order
 

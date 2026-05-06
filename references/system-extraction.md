@@ -3,6 +3,7 @@
 Persistent design memory lives in `.noootwo/system.md`.
 
 Read [design-system-setup.md](design-system-setup.md) first when the file is missing, stale, or still pending extraction.
+Use [structured-design-spec.md](structured-design-spec.md) to write extracted facts as role-based design instructions.
 
 ## Source Priority
 
@@ -20,12 +21,15 @@ Read [design-system-setup.md](design-system-setup.md) first when the file is mis
 - Source of truth, extraction sources, confidence level, and missing evidence
 - Published design system rules or token/component conventions
 - Current `.noootwo/design-tokens.md` status or gaps
+- Structured design spec: visual positioning, target qualities, anti-position, role rules, and agent guidance
 - Product purpose and audience
 - Tone and writing posture
 - Type system: confirmed fonts, fallback logic, hierarchy, and contrast strategy
+- Color roles: canvas, surface, text, accent, semantic, and data roles with usage limits
 - Component patterns: recurring shells, cards, rails, panels, forms, navigation, and evidence patterns
 - Layout density: spacing rhythm, information density, and preferred structural moves
 - Motion language
+- Shape, material, depth, imagery, iconography, and language rules
 - Platform constraints
 - Target stack, rendering surface, stack-native component vocabulary, interaction grammar, and motion primitives
 - Visual reference library and what each reference is allowed to influence
@@ -41,15 +45,20 @@ Read [design-system-setup.md](design-system-setup.md) first when the file is mis
 - `Confidence`
 - `Missing evidence`
 - `Published design system rules`
+- `Structured design spec`
 - `.noootwo/design-tokens.md` status
 - `Brand primitives`
 - `Product`
 - `Audience and jobs`
 - `Tone and language`
 - `Type system`
+- `Color roles`
 - `Component patterns`
 - `Layout density`
 - `Motion language`
+- `Shape, material, and depth`
+- `Imagery, iconography, and language`
+- `Agent design guidance`
 - `Known generic fallbacks`
 - `Forbidden combinations`
 - `Platform constraints`
@@ -69,3 +78,4 @@ Read [design-system-setup.md](design-system-setup.md) first when the file is mis
 - Mark inferred values as inferred
 - Update the file only when new information is concrete enough to persist
 - Never promote a generated direction into durable system truth unless the user confirms it should become part of the product system
+- A usable extraction should let a second agent implement the design without seeing the inspiration source

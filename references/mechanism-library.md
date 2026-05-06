@@ -7,6 +7,8 @@ Use this to convert references into reusable design mechanisms. Mechanisms are n
 - Pick mechanisms only after source discovery.
 - Record which source inspired the mechanism and what surface styling is rejected.
 - Combine at most 2 core mechanisms in one direction unless the surface is campaign-heavy.
+- Mechanism names are not visual direction. Reject names like cabinet, drawer, ledger, tray, rail, fresh, or mist when they do not make the product task faster or clearer.
+- Do not turn mechanisms into large rounded card stacks, decorative chips, or metaphor cosplay.
 - Add successful mechanisms back to `.noootwo/reference-board.md` and `.noootwo/design-tokens.md` after review.
 
 ## Seed Mechanisms

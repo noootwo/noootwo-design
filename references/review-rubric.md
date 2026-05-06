@@ -36,6 +36,7 @@ Write the review to `.noootwo/review.md` with:
 - `Loop`
 - `Scores`
 - `Style calibration fit`
+- `User decision gate`
 - `Generic SaaS flags`
 - `Claude-like convergence flags`
 - `Framework smell flags`
@@ -89,8 +90,16 @@ Flag these failures:
 - `fashionable but unusable`
 - `efficient but generic`
 - `premium cosplay`
+- `CJK display overweight`
+- `mobile app posterization`
+- `over-thick card stack`
+- `chip/status overload`
+- `decorative uppercase English labels`
+- `visual metaphor cosplay`
+- `Flutter demo feel`
 
 Any `styled but crude`, `unique but impractical`, or `fashionable but unusable` flag prevents `ready`.
+Any `CJK display overweight`, `mobile app posterization`, `visual metaphor cosplay`, or `Flutter demo feel` flag prevents `ready` for mobile app work.
 
 ## Typography Craft Checks
 
@@ -99,6 +108,8 @@ Use [typography-craft-rubric.md](typography-craft-rubric.md).
 Any of these prevents `ready`:
 
 - Display headline is too heavy, clipped, or unstable on mobile.
+- CJK display type overpowers task content or makes the screen look like a poster.
+- Decorative uppercase English labels are used as a style layer without helping navigation or state.
 - Body text is below 16px on web without a valid density reason.
 - Font sizes, weights, or line heights are arbitrary instead of tokenized.
 - Monospace is used as a lazy aesthetic shortcut.
@@ -131,6 +142,7 @@ Flag stack-specific defaults that weaken the design:
 
 - Web/React/Vue: unmodified UI-kit components, shadcn-like card walls, Lucide icon grids, generic fade-up motion
 - Flutter: default `Scaffold + AppBar + Card + ListView`, Material seed colors without art direction, no sliver or native motion strategy in a high-character app
+- Flutter: large rounded card stacks, oversized CJK headlines, too many chips/status labels, and decorative icon blocks that make the app feel like a static demo
 - SwiftUI: default list/form styling when the brief asks for a distinctive product surface
 - Jetpack Compose: default Material surfaces without token reinterpretation, no native transition or state feedback plan
 - Native apps: web landing-page structure forced into an app shell
@@ -190,6 +202,8 @@ If this fails, the decision is `needs artifact` or `refine`, not `ready`.
 - `pivot`: the underlying direction is too generic, mismatched, derivative, or structurally wrong
 - `needs artifact`: the design may be promising but cannot be judged ready because no artifact, screenshot, preview, or acceptable visual substitute was reviewed
 
+If the review exposes multiple plausible next paths, ask the user to choose before reworking. Do not silently pick between `return to directions`, `return to artifact`, `return to typography pass`, `return to responsive pass`, or `return to stack pass` when the choice changes cost, scope, or visual direction.
+
 ## Memorable Move Check
 
 - If the reviewer cannot name the one unforgettable move, the design cannot be `ready`
@@ -207,9 +221,11 @@ If this fails, the decision is `needs artifact` or `refine`, not `ready`.
 - If the draft lacks artifact strategy, stack translation, or visual proof, return to directions or stack translation before polishing
 - If production work lacks token mapping, return to `.noootwo/design-tokens.md` before handoff
 - If readiness gate fails because required `.noootwo/` files are pending or unresolved, return to the missing file before handoff
+- If full redesign was requested but user selection was skipped, return to directions before any implementation
 - If typography craft fails, return to typography pass before visual polish
 - If responsive checks fail, return to responsive pass before handoff
 - If deep source evidence or spike comparison is missing, return to discovery or artifact before drafting
+- If a material user decision is required but unresolved, return to directions or ask the user before editing
 - If the direction is right but execution is weak, return to draft with concrete fixes
 - If the direction itself is generic, return to directions instead of polishing the draft
 - "Clean but ordinary" is a failure mode, not a near-ready state
@@ -219,6 +235,7 @@ If this fails, the decision is `needs artifact` or `refine`, not `ready`.
 ## Loop Rules
 
 - Maximum 2 full review loops before escalating the trade-off to the user
+- Ask the user sooner when the next loop requires a direction change, quality/cost trade-off, or platform compromise
 - Review should separate "cleaner than before" from "distinctive enough to keep"
 - Do not let neat spacing or polished UI chrome compensate for weak originality
 - Do not spend polish loops on a direction that needs a structural pivot

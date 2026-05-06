@@ -25,6 +25,26 @@ READY_DECISION_RE = re.compile(
     r"(^|\n)\s*(?:-\s*)?(?:Decision\s*:\s*)?ready\s*(?:$|\n)",
     re.IGNORECASE,
 )
+FULL_REDESIGN_TRIGGER_RE = re.compile(
+    r"full redesign trigger\s*:\s*(?:yes|true|triggered|full redesign)",
+    re.IGNORECASE,
+)
+USER_SELECTED_DIRECTION_RE = re.compile(
+    r"^\s*-?\s*user selected direction\s*:\s*(?!\s*(?:not selected yet|not selected|pending|none|no)\s*$).+\S",
+    re.IGNORECASE | re.MULTILINE,
+)
+USER_DECISION_REQUIRED_RE = re.compile(
+    r"decision required before implementation\s*:\s*(?:yes|true|required)",
+    re.IGNORECASE,
+)
+USER_SELECTED_OPTION_RE = re.compile(
+    r"^\s*-?\s*user selected option\s*:\s*(?!\s*(?:not selected yet|not selected|pending|none|no|n/a|na)\s*$).+\S",
+    re.IGNORECASE | re.MULTILINE,
+)
+USER_DELEGATED_CHOICE_RE = re.compile(
+    r"^\s*-?\s*user delegated choice to agent\s*:\s*(?:yes|true|delegated)\s*$",
+    re.IGNORECASE | re.MULTILINE,
+)
 
 REQUIRED_REVIEW_SECTIONS = [
     "artifact evidence",
@@ -44,6 +64,13 @@ DEEP_STYLE_SECTIONS = [
     "evidence levels",
     "rejected surfaces",
     "fit scores",
+]
+
+DEEP_DIRECTIONS_SECTIONS = [
+    "full redesign checkpoint",
+    "user decision gate",
+    "user selected direction",
+    "design-spec delta",
 ]
 
 
@@ -94,6 +121,35 @@ def validate_review(target_root: Path, allow_non_ready: bool, deep_mode: bool) -
         errors.append(".noootwo/review.md does not record a review decision")
     elif not allow_non_ready and not READY_DECISION_RE.search(content):
         errors.append(".noootwo/review.md decision is not ready")
+
+    return errors
+
+
+def validate_directions(target_root: Path, deep_mode: bool) -> list[str]:
+    directions_path = target_root / ".noootwo/directions.md"
+    if not directions_path.exists():
+        return []
+
+    content = directions_path.read_text(encoding="utf-8")
+    errors: list[str] = []
+
+    if deep_mode:
+        errors.extend(
+            missing_sections(content, DEEP_DIRECTIONS_SECTIONS, ".noootwo/directions.md")
+        )
+
+    if FULL_REDESIGN_TRIGGER_RE.search(content) and not USER_SELECTED_DIRECTION_RE.search(content):
+        errors.append(
+            ".noootwo/directions.md marks full redesign but does not record User selected direction"
+        )
+    if (
+        USER_DECISION_REQUIRED_RE.search(content)
+        and not USER_SELECTED_OPTION_RE.search(content)
+        and not USER_DELEGATED_CHOICE_RE.search(content)
+    ):
+        errors.append(
+            ".noootwo/directions.md requires a user decision but does not record User selected option or delegated choice"
+        )
 
     return errors
 
@@ -153,6 +209,7 @@ def main() -> int:
     for relative_path in REQUIRED_FILES:
         errors.extend(validate_file(target_root, relative_path))
 
+    errors.extend(validate_directions(target_root, args.deep_mode))
     errors.extend(validate_review(target_root, args.allow_non_ready, args.deep_mode))
     if args.deep_mode:
         errors.extend(validate_deep_mode(target_root))

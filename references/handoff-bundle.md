@@ -15,6 +15,7 @@ Must include:
 - design intent
 - design decisions that must survive implementation
 - chosen direction
+- design spec snapshot: color roles, type roles, layout model, component vocabulary, motion thesis, and forbidden moves
 - layout map
 - component responsibilities
 - interaction and state notes
@@ -25,6 +26,7 @@ Must include:
 - artifact verification requirements
 - edge states: loading, empty, error, focus, disabled, hover or pressed
 - implementation risks
+- user decisions confirmed, delegated, or still blocking
 - implementation priority order
 
 ## `acceptance.md`
@@ -54,3 +56,5 @@ Must include:
 - If something is still uncertain, mark it as a decision point instead of hiding it
 - Preserve component names, motion intent, state behavior, and implementation risks from the review
 - Do not let handoff become a style moodboard; it must tell the implementer what to build and what not to lose
+- If the selected design spec cannot be translated into tokens and component rules, return to production mapping before implementation
+- If a user decision is still open, mark it as blocking instead of choosing silently in handoff

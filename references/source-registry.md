@@ -25,10 +25,11 @@ Risk: visual novelty may be low-utility or trend-driven. Downweight for operatio
 ## Product Craft And Design Systems
 
 - Linear, Vercel Geist, Stripe, Apple Human Interface Guidelines, Material Design, Shopify Polaris, GitHub Primer, Atlassian, IBM Carbon.
+- DESIGN.md-style design spec collections, such as `VoltAgent/awesome-design-md`, may be used only as examples of structure: role-based colors, type rules, component constraints, do/don't guidance, and agent-facing implementation notes.
 
 Best for: production UI, tokens, density, component craft, platform behavior, interaction states.
 
-Risk: can become generic if copied literally; extract constraints and systems, not surface look.
+Risk: can become generic or derivative if copied literally; extract constraints and systems, not surface look. Do not fetch these by default, do not make the skill depend on them, and do not copy brand skins into a project unless the user explicitly asks for that brand reference.
 
 ## Motion And Native Craft
 

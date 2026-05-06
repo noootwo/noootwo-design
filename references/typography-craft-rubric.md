@@ -21,12 +21,15 @@ Any of these prevents `ready`:
 
 - Overweight display type that crushes the composition.
 - Display headline clips, overflows, or creates accidental orphan words on mobile.
+- CJK display text is oversized or overweight enough to make the app feel like a poster instead of a product screen.
+- Chinese and English labels fight for attention, especially when uppercase English labels are decorative rather than functional.
 - Body text below 16px on web without a product-specific density reason.
 - Arbitrary type sizes that do not follow a scale.
 - More than 2-3 families without a clear system reason.
 - Lazy monospace as the only signal for technical, industrial, or premium mood.
 - Display/body contrast is absent, or too similar to read as a decision.
 - Letter spacing is visibly random or makes text harder to read.
+- Mobile app hierarchy depends on huge bold CJK type instead of a controlled scale, spacing, and state model.
 
 ## Review Action
 

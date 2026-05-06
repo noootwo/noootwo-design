@@ -1,6 +1,6 @@
 # Design System Setup
 
-Set up `.noootwo/system.md` before task-specific design work.
+Set up `.noootwo/system.md` before task-specific design work. Use [structured-design-spec.md](structured-design-spec.md) so the result is a design contract, not a mood summary.
 
 ## Purpose
 
@@ -29,15 +29,20 @@ Update `.noootwo/system.md` with:
 - `Confidence`
 - `Missing evidence`
 - `Published design system rules`
+- `Structured design spec`
 - `.noootwo/design-tokens.md` status
 - `Brand primitives`
 - `Product`
 - `Audience and jobs`
 - `Tone and language`
 - `Type system`
+- `Color roles`
 - `Component patterns`
 - `Layout density`
 - `Motion language`
+- `Shape, material, and depth`
+- `Imagery, iconography, and language`
+- `Agent design guidance`
 - `Known generic fallbacks`
 - `Forbidden combinations`
 - `Platform constraints`
@@ -58,3 +63,5 @@ Update `.noootwo/system.md` with:
 - Record the generic fallbacks that repeatedly weaken outputs for this product
 - If screenshots or code disagree with a generated system summary, prefer the actual artifact and record the conflict
 - When implementation is likely, refresh `.noootwo/design-tokens.md` instead of leaving style choices only in prose
+- Express colors, typography, layout, component vocabulary, motion, and states as role rules with usage limits
+- If the system memory cannot produce a compact `Do` / `Do not` instruction block for another agent, it is not specific enough

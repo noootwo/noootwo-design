@@ -37,6 +37,12 @@ Status: pending extraction; replace this template with project-specific truth be
 - Typography: TBD
 - Motion: TBD
 
+## Structured Design Spec
+
+- Visual positioning: TBD
+- Target qualities: distinctive TBD; niche TBD; practical TBD; simple TBD; efficient TBD; premium TBD; current TBD
+- Anti-position: TBD
+
 ## Design Tokens
 
 - Source file: `.noootwo/design-tokens.md`
@@ -48,6 +54,16 @@ Status: pending extraction; replace this template with project-specific truth be
 - Marks or logos: TBD
 - Imagery and illustration rules: TBD
 - Existing UI evidence: TBD
+
+## Color Roles
+
+- Canvas: TBD
+- Surface: TBD
+- Text: primary TBD; secondary TBD; disabled TBD; inverse TBD
+- Accent: TBD
+- Semantic states: success TBD; warning TBD; danger TBD; info TBD; selected TBD; focus TBD
+- Data colors: TBD
+- Forbidden color moves: TBD
 
 ## Product
 
@@ -73,24 +89,50 @@ Status: pending extraction; replace this template with project-specific truth be
 - Fallback logic: TBD
 - Hierarchy and scale: TBD
 - Contrast strategy: TBD
+- Display role: TBD
+- Title role: TBD
+- Body role: TBD
+- Label role: TBD
+- Number role: TBD
+- CJK or localization behavior: TBD
 
 ## Component Patterns
 
 - Navigation and shell patterns: TBD
 - Content and evidence patterns: TBD
 - Forms, controls, and action patterns: TBD
+- State patterns: loading TBD; empty TBD; error TBD; focus TBD; disabled TBD; selected TBD
+- Component naming rules: TBD
 
 ## Layout Density
 
 - Spacing rhythm: TBD
 - Information density: TBD
 - Preferred structural moves: TBD
+- Canvas model: TBD
+- Breakpoint or platform behavior: TBD
 
 ## Motion Language
 
 - Motion character: TBD
 - State feedback patterns: TBD
 - Interaction constraints: TBD
+- Main interaction motif: TBD
+- Reduced-motion fallback: TBD
+
+## Shape, Material, And Depth
+
+- Radius scale: TBD
+- Border and divider rules: TBD
+- Shadow or elevation rules: TBD
+- Material, texture, or background rules: TBD
+
+## Imagery, Iconography, And Language
+
+- Imagery or screenshot treatment: TBD
+- Icon style: TBD
+- Label and CTA language: TBD
+- Localization risks: TBD
 
 ## Platform Constraints
 
@@ -108,6 +150,13 @@ Status: pending extraction; replace this template with project-specific truth be
 - References reviewed: TBD
 - What each reference may influence: TBD
 - What must not be copied: TBD
+
+## Agent Design Guidance
+
+- Do: TBD
+- Do not: TBD
+- Preserve during implementation: TBD
+- When uncertain: TBD
 
 ## Known Generic Fallbacks
 

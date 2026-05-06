@@ -10,6 +10,7 @@ Use this when the target stack is Flutter.
 - Record screenshot or blocker details in `.noootwo/review.md`.
 - Do not mark Flutter work stack-native ready when the only artifact is an HTML phone-shell proxy.
 - Deep Flutter work needs at least one real route/widget preview, simulator/device screenshot, or golden-style screenshot before `stack_native_craft` can be treated as strong.
+- Full Flutter redesign work should not start implementation until the user selected a direction from the 3-direction menu, unless the user explicitly delegated that choice.
 
 ## Token Mapping
 
@@ -30,6 +31,10 @@ Use this when the target stack is Flutter.
 - Default `Scaffold + AppBar + Card + ListView` for a high-character screen
 - Material seed color without art direction
 - Generic large-radius cards and shadows
+- Oversized CJK headlines, decorative uppercase English labels, and thick rounded card stacks that make the screen feel like a poster
+- Chip/status overload where every fact becomes a pill, badge, or icon block
+- Bottom navigation that looks like a demo asset instead of a restrained platform control
+- Visual metaphor cosplay where names like cabinet, drawer, ledger, tray, or rail do not make the task faster or clearer
 - Motion as decorative garnish
 - Ignoring text scale, safe area, performance, or accessibility
 
@@ -37,5 +42,6 @@ Use this when the target stack is Flutter.
 
 - Review at least one phone viewport when possible.
 - Check text scale, safe area, touch targets, overflow, loading/empty/error states, reduced motion feasibility, and frame-risk effects.
+- Check whether the screen feels like a mature mobile app: clear task path, restrained navigation, controlled CJK type scale, useful density, and platform-credible interaction states.
 - Record whether `ThemeData`, `TextTheme`, `ThemeExtension`, slivers, `CustomPainter`, Rive, or other stack-native moves were actually used.
 - If only an HTML proxy was reviewed, the decision is `needs artifact`, `refine`, or fallback-ready only by explicit user acceptance.

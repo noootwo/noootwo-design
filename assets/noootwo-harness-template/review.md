@@ -14,6 +14,23 @@ Status: pending; every deliverable should replace this with a real review before
 - Selected spike and reason: TBD
 - If fewer than 2 deep-mode spikes, low-confidence limitation: TBD
 
+## Full Redesign Compliance
+
+- Full redesign checkpoint followed: TBD
+- User selected direction before implementation: TBD
+- UI files edited before direction selection: TBD
+- Previous failed visual language avoided: TBD
+
+## User Decision Gate
+
+- Material uncertainty or multi-path choice found: TBD
+- Question asked to user: TBD
+- Options presented: TBD
+- Recommended option and tradeoff: TBD
+- User selected option: TBD
+- User delegated choice to agent: TBD
+- Rework blocked until decision: TBD
+
 ## Multi-Viewport Evidence
 
 - Desktop or large viewport: TBD
@@ -77,6 +94,13 @@ Status: pending; every deliverable should replace this with a real review before
 - Fashionable but unusable: TBD
 - Efficient but generic: TBD
 - Premium cosplay: TBD
+- CJK display overweight: TBD
+- Mobile app posterization: TBD
+- Over-thick card stack: TBD
+- Chip or status overload: TBD
+- Decorative uppercase English labels: TBD
+- Visual metaphor cosplay: TBD
+- Flutter demo feel: TBD
 
 ## Role-Based Critique
 

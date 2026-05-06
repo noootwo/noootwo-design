@@ -36,6 +36,7 @@ Write the result to `.noootwo/adoption.md`.
 - Use `quick` for small polish after adoption.
 - Use `standard` for new surfaces that must fit the existing product.
 - Use `deep` only when the user wants a stronger art direction and reference evidence is available.
+- If the user wants all UI redesigned, complete adoption baseline, then trigger the full redesign checkpoint before editing implementation files.
 - Use `production` when the design is already chosen and needs target-stack implementation.
 
 ## Blockers

@@ -94,3 +94,9 @@ Status: pending; overwrite this file for the current active design task
 ## Open Questions
 
 - TBD
+
+## User Decisions Needed
+
+- Material decisions that cannot be inferred from evidence: TBD
+- Options to ask about: TBD
+- Recommended default if user delegates: TBD

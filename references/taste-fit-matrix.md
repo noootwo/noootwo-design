@@ -24,6 +24,9 @@ Score each dimension from 1-5.
 - `fashionable but unusable`: follows visual trends at the expense of reading, actions, or states.
 - `efficient but generic`: works, but looks like any default UI kit surface.
 - `premium cosplay`: luxury cues pasted onto a product that needs clarity or speed.
+- `mobile app posterization`: app screen reads like a static poster or dribbble shot, not a usable mobile product.
+- `visual metaphor cosplay`: product words or metaphors drive surface styling without improving the task.
+- `chip/status overload`: too many pills, badges, status labels, and icon blocks compete for attention.
 
 ## Gate
 
