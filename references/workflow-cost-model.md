@@ -16,6 +16,8 @@ Use this to prevent Noootwo Design from becoming too expensive for ordinary UI w
 - Do not add a new mode for full redesign. Use the full redesign checkpoint inside `deep` or `adopt-project -> deep`.
 - If the user asks for minor polish or to preserve the current system, use `quick`.
 - If the user asks to redo all UI or abandon the current visual language, the cost of discovery and user direction selection is intentional. Stop at the direction menu before implementation.
+- For non-quick UI implementation, the approved design spec and implementation plan are intentional cost controls. They are cheaper than reworking a bad UI after code is written.
+- Skip the spec/plan gate only for quick polish, explicit handoff-only work, or explicit user approval to proceed without the gate.
 - If time or environment blocks source mining, screenshots, or target-stack previews, record the limitation and reduce readiness confidence.
 - If only 1 deep spike is possible, mark the exploration as low-confidence and do not claim full territory comparison.
 - Prefer existing project preview tools before adding new dependencies.

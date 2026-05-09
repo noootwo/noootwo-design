@@ -4,7 +4,7 @@ Type once, get a design worth shipping.
 
 Noootwo Design is an open skill for UI design, frontend design, app-screen design, visual redesign, design-system extraction, artifact review, screenshot critique, token mapping, and implementation handoff.
 
-Current version: `v0.1.11`
+Current version: `v0.1.12`
 Version source: repository tag plus the root `VERSION` file.
 
 ## What It Does
@@ -17,6 +17,8 @@ Version source: repository tag plus the root `VERSION` file.
 - Explores 3 directions when useful, then pushes toward a real artifact or screenshot review
 - Stops for user decisions when direction, style system, brand safety, novelty, artifact path, implementation cost, or review return path has multiple viable options
 - Stops at a 3-direction menu for full redesign requests until the user selects a direction
+- Captures the selected direction in an approved design spec before implementation
+- Requires an implementation plan before non-quick UI file edits
 - Uses stage roles and agentic style discovery for deep high-character design work
 - Mines product flows, design systems, curated galleries, domestic fallback sources, and community signals, then transfers mechanisms instead of copying surfaces
 - Requires typography and responsive evidence before calling non-trivial design work ready
@@ -92,6 +94,8 @@ This creates:
 - `.noootwo/style-discovery.md`
 - `.noootwo/reference-board.md`
 - `.noootwo/directions.md`
+- `.noootwo/specs/active-design.md`
+- `.noootwo/plans/active-implementation.md`
 - `.noootwo/review.md`
 - `.noootwo/handoff/implementation.md`
 - `.noootwo/handoff/acceptance.md`
@@ -113,6 +117,18 @@ Use `--deep-mode` when validating a deep-mode deliverable. It also requires `.no
 
 For full redesign work, keep the same `--deep-mode` validator. If `.noootwo/directions.md` records `Full redesign trigger: yes`, it must also record `User selected direction` before the work can be ready.
 
+For implementation work, require the approved spec and plan gate:
+
+```bash
+python scripts/validate_noootwo_readiness.py /path/to/project --implementation-gate
+```
+
+To inspect the workflow state without reading every markdown file:
+
+```bash
+python scripts/noootwo_status.py /path/to/project
+```
+
 For local web artifacts, run the lightweight visual gate:
 
 ```bash
@@ -120,6 +136,10 @@ python scripts/check_visual_gates.py http://localhost:3000 --screenshot-dir /tmp
 ```
 
 The visual gate checks common viewport overflow and obvious clipped text. If browser automation is unavailable, record manual screenshot evidence and the limitation in `.noootwo/review.md`.
+
+## Eval Prompts
+
+The lightweight prompts in [evals/prompts](evals/prompts) are release pressure tests. They are not automated benchmarks; use them to check that agents do not skip direction selection, approved specs, implementation plans, stack-native evidence, or review gates.
 
 ## Package Layout
 
@@ -129,6 +149,7 @@ The visual gate checks common viewport overflow and obvious clipped text. If bro
 ├── agents/openai.yaml
 ├── assets/AGENTS.md
 ├── assets/noootwo-harness-template/
+├── evals/prompts/
 ├── references/
 └── scripts/
 ```
@@ -145,6 +166,7 @@ This project does not copy private prompts. It implements public, repeatable mec
 - structured design specs instead of vague style adjectives or external template dependencies
 - foreign-source accessibility checks with domestic fallback when needed
 - full redesign checkpoint before implementation when the user asks to redo all UI
+- approved design spec and implementation plan gates before non-quick UI file edits
 - typography, responsive, and spike-comparison gates for high-cost deep work
 - explicit but compact style calibration
 - code-native or stack-native artifacts before final judgment

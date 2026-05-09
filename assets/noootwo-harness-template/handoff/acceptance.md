@@ -6,6 +6,12 @@ Status: pending; define completion checks for the implementation agent
 
 - TBD
 
+## Workflow Completion
+
+- Approved design spec exists and was followed: TBD
+- Implementation plan exists and was followed: TBD
+- Any skipped gate was explicitly accepted by user: TBD
+
 ## Interaction Checks
 
 - TBD

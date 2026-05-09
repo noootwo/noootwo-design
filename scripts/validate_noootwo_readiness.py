@@ -18,6 +18,11 @@ DEEP_REQUIRED_FILES = [
     Path(".noootwo/reference-board.md"),
 ]
 
+IMPLEMENTATION_REQUIRED_FILES = [
+    Path(".noootwo/specs/active-design.md"),
+    Path(".noootwo/plans/active-implementation.md"),
+]
+
 STATUS_PENDING_RE = re.compile(r"^Status:\s*pending\b", re.IGNORECASE | re.MULTILINE)
 TBD_RE = re.compile(r"(?<!`)\bTBD\b(?!`)")
 DECISION_RE = re.compile(r"\b(ready|refine|pivot|needs artifact|not ready)\b", re.IGNORECASE)
@@ -38,12 +43,20 @@ USER_DECISION_REQUIRED_RE = re.compile(
     re.IGNORECASE,
 )
 USER_SELECTED_OPTION_RE = re.compile(
-    r"^\s*-?\s*user selected option\s*:\s*(?!\s*(?:not selected yet|not selected|pending|none|no|n/a|na)\s*$).+\S",
+    r"^\s*-?\s*user selected option\s*:\s*(?!\s*(?:TBD|not selected yet|not selected|pending|none|no|n/a|na)\s*$).+\S",
     re.IGNORECASE | re.MULTILINE,
 )
 USER_DELEGATED_CHOICE_RE = re.compile(
     r"^\s*-?\s*user delegated choice to agent\s*:\s*(?:yes|true|delegated)\s*$",
     re.IGNORECASE | re.MULTILINE,
+)
+APPROVED_BY_USER_RE = re.compile(
+    r"approved by user\s*:\s*(?:yes|true|approved)",
+    re.IGNORECASE,
+)
+PLAN_APPROVED_RE = re.compile(
+    r"user approved or delegated implementation plan\s*:\s*(?:yes|true|approved|delegated)",
+    re.IGNORECASE,
 )
 
 REQUIRED_REVIEW_SECTIONS = [
@@ -181,6 +194,54 @@ def validate_deep_mode(target_root: Path) -> list[str]:
     return errors
 
 
+def validate_implementation_gate(target_root: Path) -> list[str]:
+    errors: list[str] = []
+
+    for relative_path in IMPLEMENTATION_REQUIRED_FILES:
+        errors.extend(validate_file(target_root, relative_path))
+
+    spec_path = target_root / ".noootwo/specs/active-design.md"
+    if spec_path.exists():
+        spec_content = spec_path.read_text(encoding="utf-8")
+        errors.extend(
+            missing_sections(
+                spec_content,
+                [
+                    "approval",
+                    "design spec snapshot",
+                    "implementation contract",
+                    "artifact and review contract",
+                ],
+                ".noootwo/specs/active-design.md",
+            )
+        )
+        if not APPROVED_BY_USER_RE.search(spec_content):
+            errors.append(".noootwo/specs/active-design.md is not approved by user")
+
+    plan_path = target_root / ".noootwo/plans/active-implementation.md"
+    if plan_path.exists():
+        plan_content = plan_path.read_text(encoding="utf-8")
+        errors.extend(
+            missing_sections(
+                plan_content,
+                [
+                    "implementation steps",
+                    "token mapping tasks",
+                    "component tasks",
+                    "artifact and verification plan",
+                    "completion criteria",
+                ],
+                ".noootwo/plans/active-implementation.md",
+            )
+        )
+        if not PLAN_APPROVED_RE.search(plan_content):
+            errors.append(
+                ".noootwo/plans/active-implementation.md is not approved or delegated"
+            )
+
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Validate that Noootwo design deliverables are ready for handoff."
@@ -201,6 +262,11 @@ def main() -> int:
         action="store_true",
         help="Also validate deep-mode style discovery, reference board, and spike comparison evidence.",
     )
+    parser.add_argument(
+        "--implementation-gate",
+        action="store_true",
+        help="Also require an approved design spec and approved/delegated implementation plan.",
+    )
     args = parser.parse_args()
 
     target_root = Path(args.target).resolve()
@@ -213,6 +279,8 @@ def main() -> int:
     errors.extend(validate_review(target_root, args.allow_non_ready, args.deep_mode))
     if args.deep_mode:
         errors.extend(validate_deep_mode(target_root))
+    if args.implementation_gate:
+        errors.extend(validate_implementation_gate(target_root))
 
     if errors:
         print("Noootwo readiness validation failed:")
