@@ -13,6 +13,8 @@ For each reference, record:
 - Source and evidence type
 - Evidence level from [agentic-style-discovery.md](agentic-style-discovery.md)
 - Mechanism to borrow
+- Do-not-copy boundary for influence sources
+- Design-system translation: color roles, type roles, layout model, component vocabulary, motion thesis, or data/state grammar
 - UI primitive mapping: grid, rail, surface, type scale, state model, motion primitive, data grammar, or stack-native move
 - Rejected surface styling
 
@@ -31,6 +33,7 @@ For each reference, record:
 - Aesthetic adjectives without visible examples
 - Single screenshots with no reusable mechanism
 - Brand styling copied from another product
+- Designer/artist signature-style mimicry or "in the style of X" references
 - Generic AI, SaaS, or "Claude-ish" patterns used as proof of quality
 - Awwwards or Dribbble-style visual experiments used as product UX truth
 

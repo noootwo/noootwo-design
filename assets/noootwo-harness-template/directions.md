@@ -40,6 +40,7 @@ Status: pending; generate for standard or deep design work
 - Source pool: TBD
 - Source evidence URL or screenshot: TBD
 - Borrowed mechanisms: TBD
+- Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD
 - Mechanism library match: TBD
 - Rejected surfaces: TBD
 - Taste fit score: distinctive TBD / 5; practical TBD / 5; premium TBD / 5; credible TBD / 5
@@ -54,6 +55,7 @@ Status: pending; generate for standard or deep design work
 - Artifact strategy and stack translation: TBD
 - Why it feels rare: TBD
 - What must never happen: TBD
+- Mimicry risk to reject: TBD
 
 ## Direction 2
 
@@ -62,6 +64,7 @@ Status: pending; generate for standard or deep design work
 - Source pool: TBD
 - Source evidence URL or screenshot: TBD
 - Borrowed mechanisms: TBD
+- Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD
 - Mechanism library match: TBD
 - Rejected surfaces: TBD
 - Taste fit score: distinctive TBD / 5; practical TBD / 5; premium TBD / 5; credible TBD / 5
@@ -76,6 +79,7 @@ Status: pending; generate for standard or deep design work
 - Artifact strategy and stack translation: TBD
 - Why it feels rare: TBD
 - What must never happen: TBD
+- Mimicry risk to reject: TBD
 
 ## Direction 3
 
@@ -84,6 +88,7 @@ Status: pending; generate for standard or deep design work
 - Source pool: TBD
 - Source evidence URL or screenshot: TBD
 - Borrowed mechanisms: TBD
+- Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD
 - Mechanism library match: TBD
 - Rejected surfaces: TBD
 - Taste fit score: distinctive TBD / 5; practical TBD / 5; premium TBD / 5; credible TBD / 5
@@ -98,3 +103,4 @@ Status: pending; generate for standard or deep design work
 - Artifact strategy and stack translation: TBD
 - Why it feels rare: TBD
 - What must never happen: TBD
+- Mimicry risk to reject: TBD

@@ -11,6 +11,58 @@ from pathlib import Path
 AGENTS_SECTION_HEADING = "## UI/Design Workflow"
 AGENTS_SECTION_RE = re.compile(r"^(#{1,6})\s+UI/Design Workflow\s*$")
 
+PROFILE_FILES = {
+    "minimal": {
+        "system.md",
+        "design-tokens.md",
+        "adoption.md",
+        "brief.md",
+        "directions.md",
+        "review.md",
+    },
+    "deep": {
+        "system.md",
+        "design-tokens.md",
+        "adoption.md",
+        "brief.md",
+        "directions.md",
+        "review.md",
+        "style-discovery.md",
+        "reference-board.md",
+        "style-calibration.md",
+    },
+    "production": {
+        "system.md",
+        "design-tokens.md",
+        "adoption.md",
+        "brief.md",
+        "directions.md",
+        "review.md",
+        "specs/active-design.md",
+        "plans/active-implementation.md",
+        "handoff/implementation.md",
+        "handoff/acceptance.md",
+        "handoff/assets.md",
+    },
+}
+PROFILE_FILES["full"] = {
+    "system.md",
+    "design-tokens.md",
+    "adoption.md",
+    "product-facts.md",
+    "brief.md",
+    "style-calibration.md",
+    "style-discovery.md",
+    "reference-board.md",
+    "directions.md",
+    "review.md",
+    "specs/active-design.md",
+    "plans/active-implementation.md",
+    "handoff/implementation.md",
+    "handoff/acceptance.md",
+    "handoff/assets.md",
+}
+
 
 def merge_agents_section(agents_path: Path, section_text: str) -> str:
     section_text = section_text.strip() + "\n"
@@ -72,6 +124,12 @@ def main() -> int:
         action="store_true",
         help="Do not create or merge the target project's AGENTS.md UI/Design Workflow section.",
     )
+    parser.add_argument(
+        "--profile",
+        choices=sorted(PROFILE_FILES),
+        default="minimal",
+        help="Harness profile to copy. Defaults to minimal to reduce pending/TBD noise.",
+    )
     args = parser.parse_args()
 
     package_root = Path(__file__).resolve().parent.parent
@@ -88,12 +146,19 @@ def main() -> int:
     copied: list[Path] = []
     skipped: list[Path] = []
 
+    selected_files = PROFILE_FILES[args.profile]
+
     for source_path in sorted(source_root.rglob("*")):
         relative_path = source_path.relative_to(source_root)
+        relative_key = relative_path.as_posix()
         destination_path = destination_root / relative_path
 
         if source_path.is_dir():
-            destination_path.mkdir(parents=True, exist_ok=True)
+            if any(path.startswith(f"{relative_key}/") for path in selected_files):
+                destination_path.mkdir(parents=True, exist_ok=True)
+            continue
+
+        if relative_key not in selected_files:
             continue
 
         destination_path.parent.mkdir(parents=True, exist_ok=True)
@@ -104,7 +169,7 @@ def main() -> int:
         shutil.copy2(source_path, destination_path)
         copied.append(destination_path)
 
-    print(f"Bootstrapped {destination_root}")
+    print(f"Bootstrapped {destination_root} using profile: {args.profile}")
     if copied:
         print("Copied:")
         for path in copied:

@@ -22,6 +22,17 @@ Best for: launch pages, editorial surfaces, microsites, brand-heavy pages.
 
 Risk: visual novelty may be low-utility or trend-driven. Downweight for operational tools and app screens.
 
+## Influence Discovery Sources
+
+- Spatial and light references: installation artists, museum/exhibition systems, architecture studios, spatial designers.
+- Information and diagram references: editorial designers, cartographers, notation systems, scientific visualization, archival systems.
+- Product behavior references: journaling, wellness, relationship, devtool, creative-tool, and private-workbench products.
+- Domestic fallback: 设计博物馆/展览文章, 站酷/UI中国 designer pages, 建筑/室内/展陈案例, 小红书/B 站 design breakdowns, MasterGo/即时设计 community systems.
+
+Best for: high-character redesign, emotional product tone, non-generic visual language, and mechanism mixing.
+
+Risk: designer/artist cosplay. Borrow space, light, density, rhythm, and information grammar; never copy signature artwork, characters, logos, exact layouts, or "in the style of X" surfaces.
+
 ## Product Craft And Design Systems
 
 - Linear, Vercel Geist, Stripe, Apple Human Interface Guidelines, Material Design, Shopify Polaris, GitHub Primer, Atlassian, IBM Carbon.

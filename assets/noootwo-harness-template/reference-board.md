@@ -9,6 +9,8 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Evidence level: real product flow, product artifact, design system, curated gallery, community signal, or single shot: TBD
 - Accessibility result: reachable, fallback, or limitation: TBD
 - Borrowed mechanism: TBD
+- Do not copy: TBD
+- Design-system translation: TBD
 - Mechanism library match: TBD
 - UI primitive mapping: grid, rail, surface, type scale, state model, motion primitive, data grammar, or stack-native move: TBD
 - Rejected surface styling: TBD
@@ -20,6 +22,8 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Evidence level: TBD
 - Accessibility result: TBD
 - Borrowed mechanism: TBD
+- Do not copy: TBD
+- Design-system translation: TBD
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
@@ -31,6 +35,8 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Evidence level: TBD
 - Accessibility result: TBD
 - Borrowed mechanism: TBD
+- Do not copy: TBD
+- Design-system translation: TBD
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
@@ -42,6 +48,8 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Evidence level: TBD
 - Accessibility result: TBD
 - Borrowed mechanism: TBD
+- Do not copy: TBD
+- Design-system translation: TBD
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
@@ -53,6 +61,8 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Evidence level: TBD
 - Accessibility result: TBD
 - Borrowed mechanism: TBD
+- Do not copy: TBD
+- Design-system translation: TBD
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
@@ -65,6 +75,7 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 
 ## Selected Mechanisms
 
+- Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD
 - Typography: TBD
 - Layout and density: TBD
 - Component vocabulary: TBD

@@ -18,6 +18,8 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
   Replace with typography, spacing, imagery, and composition doing the heavy lifting.
 - Decorative charts, fake metrics, filler testimonials, or emoji iconography.
   Replace with real product evidence, real UI, or deliberately abstract visual language.
+- Designer or artist cosplay: borrowing a famous signature look, exact composition, artwork language, or personal style marker.
+  Replace with mechanism transfer: spatial rhythm, light behavior, density, information grammar, interaction model, or material logic.
 
 ## Typography Rules
 
@@ -62,6 +64,7 @@ Noootwo Design should not produce work that looks instantly AI-generated or gene
 - Do not let motion exist as a garnish after the layout has already settled into a generic shape.
 - Do not let the background collapse into a generic solid fill if the direction calls for texture, pattern, atmosphere, or depth.
 - Do not let Claude-like polish become the style: nested containers, pills, status dots, and tasteful serif headlines are not a point of view by themselves.
+- Do not use "in the style of X" as a direction. Name the transferable mechanism and the do-not-copy boundary instead.
 
 ## Self-Check
 

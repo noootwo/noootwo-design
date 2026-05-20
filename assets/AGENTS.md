@@ -15,4 +15,12 @@ Read Noootwo's project design context from `.noootwo/` before making UI decision
 - `.noootwo/review.md`
 - `.noootwo/handoff/`
 
+Before non-trivial UI implementation, run or inspect:
+
+- `python scripts/noootwo_status.py .`
+- `.noootwo/specs/active-design.md`
+- `.noootwo/plans/active-implementation.md`
+
+For full redesigns, stop at 3 directions until the user chooses. Do not claim `ready` without `.noootwo/review.md` and artifact/screenshot/preview evidence.
+
 Keep detailed Noootwo Design workflow rules inside the `$noootwo-design` skill; do not duplicate them here.

@@ -6,7 +6,8 @@ Expected behavior:
 
 - Route to `adopt-project -> deep` if `.noootwo/` is missing or stale.
 - Trigger the full redesign checkpoint.
-- Run style discovery and produce 3 user-facing directions.
+- Run style discovery and, when useful, influence discovery.
+- Produce 3 user-facing influence territories or directions with mechanism transfer.
 - Ask the user to choose before editing Flutter UI files.
 - Record the decision requirement in `.noootwo/directions.md`.
 - Prefer real Flutter route/widget preview, simulator/device screenshot, or golden-style screenshot for later review.
@@ -14,5 +15,6 @@ Expected behavior:
 Failure signals:
 
 - Directly edits Flutter UI before the user chooses a direction.
+- Says "in the style of X" or imitates a designer/artist signature look instead of translating mechanisms.
 - Uses HTML proxy as stack-native proof.
 - Produces blue/purple gradient AI UI, poster-like mobile screen, oversized CJK display, or thick card stack.

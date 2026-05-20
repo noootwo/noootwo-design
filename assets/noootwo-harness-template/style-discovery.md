@@ -56,6 +56,12 @@ Status: pending; required for deep mode before high-character directions
 - Cluster 2: TBD
 - Cluster 3: TBD
 
+## Influence Shortlist
+
+- Influence 1: source TBD; why relevant TBD; borrowable mechanisms TBD; do not copy TBD; translation TBD; risk TBD
+- Influence 2: source TBD; why relevant TBD; borrowable mechanisms TBD; do not copy TBD; translation TBD; risk TBD
+- Influence 3: source TBD; why relevant TBD; borrowable mechanisms TBD; do not copy TBD; translation TBD; risk TBD
+
 ## Borrowed Mechanisms
 
 - Grid, rail, or composition: TBD
@@ -65,9 +71,19 @@ Status: pending; required for deep mode before high-character directions
 - Data grammar or state model: TBD
 - Material, imagery, or surface: TBD
 
+## Design-System Translation
+
+- Color roles: TBD
+- Type roles: TBD
+- Layout model: TBD
+- Component vocabulary: TBD
+- Motion thesis: TBD
+- Data, state, or interaction grammar: TBD
+
 ## Rejected Surfaces
 
 - AI gradient SaaS, card wall, fake dashboard, trend skin, or other rejected patterns: TBD
+- Rejected mimicry: designer/artist cosplay, signature-style mimicry, exact artwork/layout copying, or other: TBD
 
 ## Spike Comparison
 

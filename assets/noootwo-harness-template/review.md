@@ -100,6 +100,9 @@ Status: pending; every deliverable should replace this with a real review before
 - Chip or status overload: TBD
 - Decorative uppercase English labels: TBD
 - Visual metaphor cosplay: TBD
+- Designer or artist cosplay: TBD
+- Signature-style mimicry: TBD
+- Beautiful but unfit for product task: TBD
 - Flutter demo feel: TBD
 
 ## Role-Based Critique

@@ -20,7 +20,7 @@ Write `.noootwo/directions.md` with:
 - user decision gate: whether a choice is required, the exact question, options, recommendation, user selection, and whether the user delegated the choice
 - 3 named directions
 - surface type and why the chosen source pool fits
-- for each direction: discovery method, source evidence URL or screenshot, borrowed mechanisms, mechanism-library match, rejected surfaces, calibration relationship, lineage/tone, unforgettable move, design-spec delta, type/color/density, typography craft, component/shape language, motion thesis, artifact strategy, why rare, what must never happen
+- for each direction: discovery method, source evidence URL or screenshot, borrowed mechanisms, influence mechanism mix when used, mechanism-library match, rejected surfaces, calibration relationship, lineage/tone, unforgettable move, design-spec delta, type/color/density, typography craft, component/shape language, motion thesis, artifact strategy, why rare, what must never happen, mimicry risk to reject
 
 ## Internal Preflight
 
@@ -34,6 +34,7 @@ Before drafting, confirm:
 - each direction defines font logic, scale, weight roles, line-height, letter-spacing, and mobile display cap
 - no direction is only a palette swap
 - no direction defaults to generic SaaS, shadcn-card-wall, or Flutter/native defaults without product reason
+- no influence-led direction imitates a designer/artist signature style instead of translating mechanisms
 - if options are materially different, `User selected option` or `User delegated choice to agent` is recorded before drafting
 
 If 3 directions share the same opening structure or component skeleton, redo exploration.

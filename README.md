@@ -4,7 +4,7 @@ Type once, get a design worth shipping.
 
 Noootwo Design is an open skill for UI design, frontend design, app-screen design, visual redesign, design-system extraction, artifact review, screenshot critique, token mapping, and implementation handoff.
 
-Current version: `v0.1.12`
+Current version: `v0.1.14`
 Version source: repository tag plus the root `VERSION` file.
 
 ## What It Does
@@ -20,6 +20,7 @@ Version source: repository tag plus the root `VERSION` file.
 - Captures the selected direction in an approved design spec before implementation
 - Requires an implementation plan before non-quick UI file edits
 - Uses stage roles and agentic style discovery for deep high-character design work
+- Uses optional influence discovery to find designer, artist, studio, product, movement, or spatial-system mechanisms without copying signature style
 - Mines product flows, design systems, curated galleries, domestic fallback sources, and community signals, then transfers mechanisms instead of copying surfaces
 - Requires typography and responsive evidence before calling non-trivial design work ready
 - Keeps high-cost deep workflow limited to high-end, niche, brand-heavy, or major redesign tasks
@@ -83,23 +84,16 @@ Bootstrap the template into a project with:
 python scripts/bootstrap_noootwo_harness.py
 ```
 
-This creates:
+The default profile is `minimal` to reduce pending/TBD noise. Profiles:
 
-- `.noootwo/system.md`
-- `.noootwo/design-tokens.md`
-- `.noootwo/adoption.md`
-- `.noootwo/product-facts.md`
-- `.noootwo/brief.md`
-- `.noootwo/style-calibration.md`
-- `.noootwo/style-discovery.md`
-- `.noootwo/reference-board.md`
-- `.noootwo/directions.md`
-- `.noootwo/specs/active-design.md`
-- `.noootwo/plans/active-implementation.md`
-- `.noootwo/review.md`
-- `.noootwo/handoff/implementation.md`
-- `.noootwo/handoff/acceptance.md`
-- `.noootwo/handoff/assets.md`
+- `minimal`: baseline system, adoption, brief, tokens, directions, review
+- `deep`: minimal plus discovery, reference board, calibration
+- `production`: minimal plus approved spec, implementation plan, handoff
+- `full`: all templates
+
+```bash
+python scripts/bootstrap_noootwo_harness.py /path/to/project --profile deep
+```
 
 ## Readiness Validation
 
@@ -127,6 +121,12 @@ To inspect the workflow state without reading every markdown file:
 
 ```bash
 python scripts/noootwo_status.py /path/to/project
+```
+
+Run lightweight workflow pressure tests against completed `.noootwo/` artifacts:
+
+```bash
+python scripts/eval_noootwo_artifacts.py /path/to/project --scenario all
 ```
 
 For local web artifacts, run the lightweight visual gate:
@@ -162,11 +162,14 @@ This project does not copy private prompts. It implements public, repeatable mec
 - standard project `AGENTS.md` guidance for model discovery
 - stage roles so research, art direction, implementation, and evaluation do not blur together
 - agentic style discovery before deep high-character drafts
+- influence discovery for mechanism transfer, not designer/artist mimicry
 - source weighting and mechanism transfer instead of surface copying
 - structured design specs instead of vague style adjectives or external template dependencies
 - foreign-source accessibility checks with domestic fallback when needed
 - full redesign checkpoint before implementation when the user asks to redo all UI
 - approved design spec and implementation plan gates before non-quick UI file edits
+- minimal bootstrap plus profile-based expansion to reduce default context noise
+- artifact structure evals for workflow pressure tests
 - typography, responsive, and spike-comparison gates for high-cost deep work
 - explicit but compact style calibration
 - code-native or stack-native artifacts before final judgment
