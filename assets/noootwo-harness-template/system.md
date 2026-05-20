@@ -55,6 +55,19 @@ Status: pending extraction; replace this template with project-specific truth be
 - Imagery and illustration rules: TBD
 - Existing UI evidence: TBD
 
+## Preservation Contract
+
+- Permanent rules: TBD
+- Variable expression: TBD
+- Task exceptions: TBD
+- Must preserve: TBD
+- Allowed variation: TBD
+- Forbidden substitution: TBD
+- Signature mechanism: TBD
+- Token target: TBD
+- Component target: TBD
+- Motion target: TBD
+
 ## Color Roles
 
 - Canvas: TBD
@@ -150,6 +163,7 @@ Status: pending extraction; replace this template with project-specific truth be
 - References reviewed: TBD
 - What each reference may influence: TBD
 - What must not be copied: TBD
+- Preservation contract per reference: TBD
 
 ## Agent Design Guidance
 

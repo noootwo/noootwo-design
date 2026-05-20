@@ -32,6 +32,7 @@ Update `.noootwo/system.md` with:
 - `Structured design spec`
 - `.noootwo/design-tokens.md` status
 - `Brand primitives`
+- `Preservation contract`
 - `Product`
 - `Audience and jobs`
 - `Tone and language`
@@ -64,4 +65,5 @@ Update `.noootwo/system.md` with:
 - If screenshots or code disagree with a generated system summary, prefer the actual artifact and record the conflict
 - When implementation is likely, refresh `.noootwo/design-tokens.md` instead of leaving style choices only in prose
 - Express colors, typography, layout, component vocabulary, motion, and states as role rules with usage limits
+- Record permanent rules, variable expression, and task exceptions so reference-inspired work does not become generic during implementation
 - If the system memory cannot produce a compact `Do` / `Do not` instruction block for another agent, it is not specific enough

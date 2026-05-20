@@ -21,6 +21,7 @@ Write `.noootwo/directions.md` with:
 - 3 named directions
 - surface type and why the chosen source pool fits
 - for each direction: discovery method, source evidence URL or screenshot, borrowed mechanisms, influence mechanism mix when used, mechanism-library match, rejected surfaces, calibration relationship, lineage/tone, unforgettable move, design-spec delta, type/color/density, typography craft, component/shape language, motion thesis, artifact strategy, why rare, what must never happen, mimicry risk to reject
+- for each direction: must-preserve, allowed-variation, forbidden-substitution, signature-mechanism, token-target, component-target, and motion-target
 
 ## Internal Preflight
 
@@ -28,6 +29,7 @@ Before drafting, confirm:
 
 - the 3 directions differ in type, structure, density, mood, component language, and motion
 - each direction has a design-spec delta: color roles, type roles, layout model, component vocabulary, motion thesis, and forbidden moves
+- each direction states what must survive translation into tokens and implementation, what may vary, and what must never be substituted
 - product UI directions use product/design-system evidence, while campaign UI directions may use more experimental art-direction evidence
 - each direction names how it becomes reviewable
 - each direction has stack translation

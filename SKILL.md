@@ -6,7 +6,7 @@ license: MIT
 
 # Noootwo Design
 
-Noootwo Design turns UI requests into design-system-aware, stack-aware, reviewable interface work.
+Noootwo Design turns UI requests into design-system-aware, stack-aware, reviewable interface work, with explicit preservation contracts so the discovered style survives translation into tokens, components, motion, and handoff.
 
 Use for new UI pages, app screens, dashboards, workbenches, landing pages, visual redesign, typography, motion, art direction, screenshot review, design-system extraction, and handoff. Do not use for backend-only work, CLI tasks, pure logic bug fixes, or refactors with no UI impact.
 
@@ -21,7 +21,7 @@ Read only what the selected mode needs. Useful files include:
 - `.noootwo/specs/active-design.md`, `.noootwo/plans/active-implementation.md`
 - `.noootwo/review.md`, `.noootwo/handoff/implementation.md`, `.noootwo/handoff/acceptance.md`, `.noootwo/handoff/assets.md`
 
-If a file is missing, stale, or `Status: pending`, refresh only the minimum needed for the current step. Write decisions as structured design specs: evidence, confidence, color roles, type roles, layout/density, component vocabulary, motion, do/don't guidance, and stack mapping.
+If a file is missing, stale, or `Status: pending`, refresh only the minimum needed for the current step. Write decisions as structured design specs: evidence, confidence, color roles, type roles, layout/density, component vocabulary, motion, do/don't guidance, preservation contract, and stack mapping.
 
 ## Mode Routing
 
@@ -30,6 +30,7 @@ Pick one mode first; do not run deep by default.
 - `quick`: minor polish, spacing/type fixes, or "stay close to current style".
 - `adopt-project`: first Noootwo use in an existing UI project; capture baseline before redesigning.
 - `standard`: ordinary new UI/redesign; light calibration, 3 directions, 1 artifact, review.
+- `deep`: high-end, niche, rare, brand-heavy, Claude Design-like, full redesign, or previous output was too generic.
 - `deep`: high-end, niche, rare, brand-heavy, Claude Design-like, full redesign, or previous output was too generic.
 - `production`: approved design implementation; tokens, stack mapping, artifact verification, handoff.
 - `extract-system`: build or refresh design memory and tokens.
@@ -89,7 +90,7 @@ User decision gate: ask the user when material uncertainty affects direction, br
 - Prefer lived artifacts: screenshot, running page, simulator preview, target-stack prototype, or recorded interaction.
 - If no artifact evidence exists, mark `needs artifact` unless the user accepted the limitation.
 - Use [review-rubric.md](references/review-rubric.md), [typography-craft-rubric.md](references/typography-craft-rubric.md), and [responsive-visual-gates.md](references/responsive-visual-gates.md). Use [data-ui-rubric.md](references/data-ui-rubric.md) for dashboards or metric-heavy UI.
-- A non-ready decision needs one return action: `return to discovery`, `directions`, `artifact`, `responsive pass`, `typography pass`, `stack pass`, or `handoff`.
+- A non-ready decision needs one return action: `return to discovery`, `return to directions`, `return to approved spec`, `return to artifact`, `return to responsive pass`, `return to typography pass`, `return to stack pass`, or `return to handoff`.
 
 ## Hard Rules
 
@@ -98,6 +99,7 @@ User decision gate: ask the user when material uncertainty affects direction, br
 - Never default to `Inter-only`, `system-only`, `hero + cards`, generic shadcn-like UI, or Flutter `Scaffold + AppBar + Card + ListView` without product reason.
 - Do not replace generic SaaS with Claude-ish formula: serif headline, mono annotations, dossier panels, pills/status dots, and archival language without product reason.
 - Do not imitate a specific designer/artist's signature look. Borrow mechanisms and reject mimicry.
+- Do not keep only the surface style of a reference while losing its mechanism, token logic, or component/motion vocabulary.
 - Do not justify product UI using only campaign-gallery references.
 - Flutter/native work needs stack-native preview evidence; HTML proxy is fallback only and cannot be stack-native ready.
 - A design is not complete while required `.noootwo/` deliverables are pending, unresolved, or missing artifact evidence.

@@ -61,6 +61,7 @@ PLAN_APPROVED_RE = re.compile(
 
 REQUIRED_REVIEW_SECTIONS = [
     "artifact evidence",
+    "preservation contract",
     "typography craft",
     "responsive visual gate",
     "decision",
@@ -75,6 +76,7 @@ DEEP_STYLE_SECTIONS = [
     "source accessibility",
     "source evidence",
     "evidence levels",
+    "preservation contract",
     "rejected surfaces",
     "fit scores",
 ]
@@ -84,6 +86,18 @@ DEEP_DIRECTIONS_SECTIONS = [
     "user decision gate",
     "user selected direction",
     "design-spec delta",
+    "preservation contract",
+]
+
+TOKEN_SECTIONS = [
+    "preservation contract",
+]
+
+DEEP_REFERENCE_SECTIONS = [
+    "source url or artifact",
+    "borrowed mechanism",
+    "selected mechanisms",
+    "preservation contract",
 ]
 
 
@@ -138,6 +152,15 @@ def validate_review(target_root: Path, allow_non_ready: bool, deep_mode: bool) -
     return errors
 
 
+def validate_tokens(target_root: Path) -> list[str]:
+    tokens_path = target_root / ".noootwo/design-tokens.md"
+    if not tokens_path.exists():
+        return []
+
+    content = tokens_path.read_text(encoding="utf-8")
+    return missing_sections(content, TOKEN_SECTIONS, ".noootwo/design-tokens.md")
+
+
 def validate_directions(target_root: Path, deep_mode: bool) -> list[str]:
     directions_path = target_root / ".noootwo/directions.md"
     if not directions_path.exists():
@@ -186,7 +209,7 @@ def validate_deep_mode(target_root: Path) -> list[str]:
         errors.extend(
             missing_sections(
                 reference_content,
-                ["source url or artifact", "borrowed mechanism", "selected mechanisms"],
+                DEEP_REFERENCE_SECTIONS,
                 ".noootwo/reference-board.md",
             )
         )
@@ -208,6 +231,7 @@ def validate_implementation_gate(target_root: Path) -> list[str]:
                 spec_content,
                 [
                     "approval",
+                    "preservation contract",
                     "design spec snapshot",
                     "implementation contract",
                     "artifact and review contract",
@@ -227,6 +251,7 @@ def validate_implementation_gate(target_root: Path) -> list[str]:
                 [
                     "implementation steps",
                     "token mapping tasks",
+                    "preservation tasks",
                     "component tasks",
                     "artifact and verification plan",
                     "completion criteria",
@@ -275,6 +300,7 @@ def main() -> int:
     for relative_path in REQUIRED_FILES:
         errors.extend(validate_file(target_root, relative_path))
 
+    errors.extend(validate_tokens(target_root))
     errors.extend(validate_directions(target_root, args.deep_mode))
     errors.extend(validate_review(target_root, args.allow_non_ready, args.deep_mode))
     if args.deep_mode:

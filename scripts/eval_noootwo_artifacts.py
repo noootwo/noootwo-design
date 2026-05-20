@@ -70,6 +70,7 @@ def eval_influence(root: Path) -> list[str]:
     require(errors, "influence shortlist" in discovery.lower(), "influence shortlist missing")
     require(errors, "do not copy" in combined, "do-not-copy boundary missing")
     require(errors, "translation" in combined, "design-system translation missing")
+    require(errors, "preservation contract" in combined, "preservation contract missing")
     require(errors, "risk" in combined or "rejected mimicry" in combined, "mimicry/risk record missing")
     require(errors, "in the style of" not in combined, "direct 'in the style of' wording found")
     return errors
@@ -85,6 +86,8 @@ def eval_implementation(root: Path) -> list[str]:
     require(errors, not has_unresolved(plan), "implementation plan unresolved")
     require(errors, bool(APPROVED_RE.search(spec)), "approved design spec not approved by user")
     require(errors, bool(PLAN_APPROVED_RE.search(plan)), "implementation plan not approved or delegated")
+    require(errors, "preservation contract" in spec.lower(), "approved design spec preservation contract missing")
+    require(errors, "preservation tasks" in plan.lower(), "implementation plan preservation tasks missing")
     return errors
 
 
@@ -101,6 +104,7 @@ def eval_ready(root: Path) -> list[str]:
     review = read(root, ".noootwo/review.md")
     require(errors, bool(ARTIFACT_RE.search(review)), "artifact/screenshot/preview evidence missing")
     require(errors, "decision" in review.lower(), "review decision missing")
+    require(errors, "preservation contract" in review.lower(), "review preservation contract missing")
     return errors
 
 

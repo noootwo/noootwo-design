@@ -22,6 +22,7 @@ Use [structured-design-spec.md](structured-design-spec.md) to write extracted fa
 - Published design system rules or token/component conventions
 - Current `.noootwo/design-tokens.md` status or gaps
 - Structured design spec: visual positioning, target qualities, anti-position, role rules, and agent guidance
+- Preservation contract: permanent rules, variable expression, and task-specific exceptions
 - Product purpose and audience
 - Tone and writing posture
 - Type system: confirmed fonts, fallback logic, hierarchy, and contrast strategy
@@ -35,6 +36,7 @@ Use [structured-design-spec.md](structured-design-spec.md) to write extracted fa
 - Visual reference library and what each reference is allowed to influence
 - Known generic fallbacks that would degrade the work
 - Forbidden combinations and "never do this" constraints
+- Preservation contract: what must survive implementation, what may vary, and what must never be substituted
 
 ## Output Shape For `.noootwo/system.md`
 
@@ -69,6 +71,7 @@ Use [structured-design-spec.md](structured-design-spec.md) to write extracted fa
 - `Motion primitives`
 - `Visual reference library`
 - `Refresh triggers`
+- `Preservation contract`
 
 ## Rules
 

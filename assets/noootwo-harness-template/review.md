@@ -21,6 +21,16 @@ Status: pending; every deliverable should replace this with a real review before
 - UI files edited before direction selection: TBD
 - Previous failed visual language avoided: TBD
 
+## Preservation Contract
+
+- Must preserve: TBD
+- Allowed variation: TBD
+- Forbidden substitution: TBD
+- Signature mechanism still visible: TBD
+- Token target honored: TBD
+- Component target honored: TBD
+- Motion target honored: TBD
+
 ## User Decision Gate
 
 - Material uncertainty or multi-path choice found: TBD
@@ -84,6 +94,7 @@ Status: pending; every deliverable should replace this with a real review before
 - Claude-like convergence: TBD
 - Claude-ish serif + mono + dossier + status dots: TBD
 - Framework smell: TBD
+- Surface-only style preservation without mechanism transfer: TBD
 
 ## Designer-Grade Failure Flags
 
@@ -104,6 +115,7 @@ Status: pending; every deliverable should replace this with a real review before
 - Signature-style mimicry: TBD
 - Beautiful but unfit for product task: TBD
 - Flutter demo feel: TBD
+- Preservation drift: style kept, mechanism lost: TBD
 
 ## Role-Based Critique
 
@@ -111,6 +123,12 @@ Status: pending; every deliverable should replace this with a real review before
 - Product Designer verdict: TBD
 - Stack Craftsperson verdict: TBD
 - Design Director / Evaluator verdict: TBD
+
+## Preservation Verdict
+
+- Mechanism preserved: TBD
+- Visual only: TBD
+- Lost in translation: TBD
 
 ## Data UI Evidence
 
@@ -127,6 +145,7 @@ Status: pending; every deliverable should replace this with a real review before
 - Responsive evidence recorded: TBD
 - Deep-mode source evidence recorded if applicable: TBD
 - Deep-mode spike comparison recorded if applicable: TBD
+- Preservation contract recorded: TBD
 
 ## Memorable Move
 
@@ -138,7 +157,7 @@ Status: pending; every deliverable should replace this with a real review before
 
 ## Return Action
 
-- return to discovery, directions, artifact, responsive pass, typography pass, stack pass, or handoff: TBD
+- return to discovery, directions, approved spec, artifact, responsive pass, typography pass, stack pass, or handoff: TBD
 
 ## Highest-Leverage Fixes
 

@@ -2,7 +2,7 @@
 
 Use this format when extracting a design system, writing directions, or preparing handoff. It borrows the useful structure of `DESIGN.md`-style design instructions without depending on any external repository, brand template, or live fetch.
 
-Research basis: `DESIGN.md`-style repositories such as `VoltAgent/awesome-design-md` show that agents follow UI intent better when visual systems are written as color roles, typography roles, component rules, spacing rules, and do/don't constraints. Noootwo absorbs that format only; it does not require that repository or copy its brand-specific specs.
+Research basis: `DESIGN.md`-style repositories such as `VoltAgent/awesome-design-md` show that agents follow UI intent better when visual systems are written as color roles, typography roles, component rules, spacing rules, and do/don't constraints. Noootwo absorbs that format only; it does not require that repository or copy its brand-specific specs. Current public design-system guidance also supports role-based translation: Figma describes primitive, semantic, and component token layers; Atlassian frames tokens as single-source usage names for design decisions; Carbon frames motion as productive feedback and expression rather than decoration.
 
 ## Purpose
 
@@ -100,6 +100,24 @@ Write a compact instruction block another agent can follow:
 - Preserve: decisions that must survive translation into React, Vue, Flutter, SwiftUI, Compose, or native.
 - When uncertain: the fallback choice and the evidence needed to replace it.
 
+### 11. Preservation Contract
+
+Treat the selected direction as three layers:
+
+- Permanent rules: the few decisions that define the system's identity and must not change during translation
+- Variable expression: details that may adapt to stack, content, or device without losing the direction
+- Task exceptions: one-off changes allowed for this surface only, with the reason recorded
+
+For each selected direction, explicitly name:
+
+- `must preserve`: the 1-3 mechanisms that define the direction
+- `allowed variation`: what may change in implementation without losing the direction
+- `forbidden substitution`: what would collapse the design into a generic fallback
+- `signature mechanism`: the single most distinctive transferable behavior
+- `token target`: the semantic token rules that need to exist
+- `component target`: the component vocabulary that needs to exist
+- `motion target`: the motion rule that needs to exist
+
 ## Direction Usage
 
 Each direction should include a `Design-spec delta`: the subset of this spec that would become project truth if the user selects it. Keep this shorter than the system memory; focus on the decisions that make the direction materially different.
@@ -114,3 +132,4 @@ Handoff should include a `Design Spec Snapshot` with the selected color roles, t
 - Never promote a proposed direction into `.noootwo/system.md` unless the user confirms it should become durable truth.
 - If a design spec cannot name typography roles, layout model, component vocabulary, and forbidden moves, it is not ready for implementation.
 - If the spec has many adjectives but few role rules, return to system extraction or directions.
+- If the preservation contract is missing, the spec is not implementation-ready.

@@ -32,8 +32,12 @@ If 2 or more flags are present, the design cannot be `ready`. If 3 or more are p
 - `signature-style mimicry`
 - `beautiful but unfit for product task`
 - `Flutter demo feel`
+- `style preserved only at the surface, not in the mechanism`
+- `tokens exist but the signature mechanism is gone`
+- `component and motion vocabulary drifted away from the source mechanism`
 
 Any `styled but crude`, `unique but impractical`, `fashionable but unusable`, `designer/artist cosplay`, `signature-style mimicry`, or `beautiful but unfit for product task` flag prevents `ready`.
+Any `style preserved only at the surface, not in the mechanism`, `tokens exist but the signature mechanism is gone`, or `component and motion vocabulary drifted away from the source mechanism` flag prevents `ready`.
 
 ## Claude-Like And Framework Smell
 
@@ -52,6 +56,7 @@ Any `styled but crude`, `unique but impractical`, `fashionable but unusable`, `d
 - Missing artifact strategy, stack translation, or visual proof: return to directions or stack translation.
 - Missing deep source evidence or spike comparison: return to discovery or artifact.
 - Missing token mapping in production: return to `.noootwo/design-tokens.md`.
+- Missing preservation contract: return to directions or approved spec.
 - Failed typography: return to typography pass.
 - Failed responsive check: return to responsive pass.
 - Generic direction: return to directions, not polish.

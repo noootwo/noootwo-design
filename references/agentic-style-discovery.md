@@ -12,9 +12,10 @@ Use this in deep mode before high-character UI. The goal is to discover usable s
 6. `Influence Discovery` when useful: find relevant designers, artists, studios, products, movements, architecture, exhibition systems, or spatial references.
 7. `Pattern Clustering`: cluster findings into 3-5 mechanism groups instead of listing examples.
 8. `Mechanism Transfer`: translate each cluster into UI primitives such as grid, rail, surface, type scale, data grammar, state model, motion primitive, or native component vocabulary.
-9. `Fit Scoring`: score each candidate for scenario fit, practicality, distinctiveness, implementation cost, and brand risk.
-10. `Artifact Spike`: produce 2-3 small visual spikes for the best territories before investing in a polished draft. If only 1 spike is possible, mark low confidence.
-11. `Evaluator Pass`: reject AI slop, trend cosplay, artist/designer cosplay, crude styling, weak utility, typography failure, responsive failure, and stack-incredible directions.
+9. `Preservation Contract`: state what must survive translation, what may vary, and what must never be substituted.
+10. `Fit Scoring`: score each candidate for scenario fit, practicality, distinctiveness, implementation cost, and brand risk.
+11. `Artifact Spike`: produce 2-3 small visual spikes for the best territories before investing in a polished draft. If only 1 spike is possible, mark low confidence.
+12. `Evaluator Pass`: reject AI slop, trend cosplay, artist/designer cosplay, crude styling, weak utility, typography failure, responsive failure, and stack-incredible directions.
 
 ## Influence Discovery
 
@@ -79,6 +80,7 @@ Write `.noootwo/style-discovery.md` with:
 - Influence shortlist when used
 - Rejected mimicry
 - Design-system translation
+- Preservation contract
 - Rejected surfaces
 - Fit scores
 - Spike comparison

@@ -31,6 +31,15 @@ Status: pending; fill after `.noootwo/specs/active-design.md` is approved and be
 - Motion tokens: TBD
 - Stack-specific mapping: TBD
 
+## Preservation Tasks
+
+- Must-preserve mechanism mapped to implementation: TBD
+- Allowed variation accepted for this stack: TBD
+- Forbidden substitutions checked before editing: TBD
+- Token target implemented: TBD
+- Component target implemented: TBD
+- Motion target implemented: TBD
+
 ## Component Tasks
 
 - Shell and navigation: TBD

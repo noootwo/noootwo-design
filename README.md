@@ -4,7 +4,7 @@ Type once, get a design worth shipping.
 
 Noootwo Design is an open skill for UI design, frontend design, app-screen design, visual redesign, design-system extraction, artifact review, screenshot critique, token mapping, and implementation handoff.
 
-Current version: `v0.1.14`
+Current version: `v0.1.15`
 Version source: repository tag plus the root `VERSION` file.
 
 ## What It Does
@@ -21,6 +21,7 @@ Version source: repository tag plus the root `VERSION` file.
 - Requires an implementation plan before non-quick UI file edits
 - Uses stage roles and agentic style discovery for deep high-character design work
 - Uses optional influence discovery to find designer, artist, studio, product, movement, or spatial-system mechanisms without copying signature style
+- Preserves the discovered style through an explicit translation contract so the direction survives tokens, components, motion, and handoff
 - Mines product flows, design systems, curated galleries, domestic fallback sources, and community signals, then transfers mechanisms instead of copying surfaces
 - Requires typography and responsive evidence before calling non-trivial design work ready
 - Keeps high-cost deep workflow limited to high-end, niche, brand-heavy, or major redesign tasks

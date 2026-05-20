@@ -14,6 +14,7 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Mechanism library match: TBD
 - UI primitive mapping: grid, rail, surface, type scale, state model, motion primitive, data grammar, or stack-native move: TBD
 - Rejected surface styling: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD
 
 ## Source 2
 
@@ -27,6 +28,7 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD
 
 ## Source 3
 
@@ -40,6 +42,7 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD
 
 ## Optional Source 4
 
@@ -53,6 +56,7 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD
 
 ## Optional Source 5
 
@@ -66,6 +70,7 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Mechanism library match: TBD
 - UI primitive mapping: TBD
 - Rejected surface styling: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD
 
 ## Mechanism Clusters
 
@@ -81,3 +86,4 @@ Status: pending; deep mode should fill this from `.noootwo/style-discovery.md`
 - Component vocabulary: TBD
 - Motion or interaction: TBD
 - Background, material, imagery, or data treatment: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD

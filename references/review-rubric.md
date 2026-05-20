@@ -54,7 +54,7 @@ If this fails, use `needs artifact` or `refine`, not `ready`.
 - `pivot`: direction is generic, mismatched, derivative, impractical, or structurally wrong.
 - `needs artifact`: design may be promising but cannot be judged from current evidence.
 
-Non-ready work needs exactly one primary return action: `return to discovery`, `return to directions`, `return to artifact`, `return to responsive pass`, `return to typography pass`, `return to stack pass`, or `return to handoff`.
+Non-ready work needs exactly one primary return action: `return to discovery`, `return to directions`, `return to approved spec`, `return to artifact`, `return to responsive pass`, `return to typography pass`, `return to stack pass`, or `return to handoff`.
 
 If multiple return actions are plausible and the choice changes cost, scope, or visual direction, ask the user before reworking.
 

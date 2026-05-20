@@ -17,6 +17,7 @@ For each reference, record:
 - Design-system translation: color roles, type roles, layout model, component vocabulary, motion thesis, or data/state grammar
 - UI primitive mapping: grid, rail, surface, type scale, state model, motion primitive, data grammar, or stack-native move
 - Rejected surface styling
+- Preservation contract: what must survive, what may vary, and what must never be substituted
 
 ## Good Mechanisms
 
@@ -39,4 +40,4 @@ For each reference, record:
 
 ## Output
 
-Record the discovery process in `.noootwo/style-discovery.md`, the selected source mechanisms in `.noootwo/reference-board.md`, and the mechanism transfer in `.noootwo/directions.md`.
+Record the discovery process in `.noootwo/style-discovery.md`, the selected source mechanisms in `.noootwo/reference-board.md`, and the mechanism transfer plus preservation contract in `.noootwo/directions.md`.

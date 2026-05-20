@@ -10,6 +10,16 @@ Status: pending; fill this after a design direction has passed review
 
 - TBD
 
+## Preservation Contract
+
+- Must preserve: TBD
+- Allowed variation: TBD
+- Forbidden substitution: TBD
+- Signature mechanism: TBD
+- Token target: TBD
+- Component target: TBD
+- Motion target: TBD
+
 ## Chosen Direction
 
 - TBD
@@ -30,6 +40,7 @@ Status: pending; fill this after a design direction has passed review
 - Motion thesis: TBD
 - Imagery, iconography, and language rules: TBD
 - Forbidden moves: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD
 
 ## Token Mapping
 

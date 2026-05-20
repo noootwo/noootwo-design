@@ -87,3 +87,16 @@ Status: pending; fill or refresh when a direction moves toward implementation
 - What must survive implementation: TBD
 - What must not be introduced: TBD
 - Fallback if a token is missing: TBD
+
+## Preservation Contract
+
+- Permanent rules encoded by these tokens: TBD
+- Variable expressions allowed inside the same direction: TBD
+- Task-specific exceptions allowed only here: TBD
+- Must preserve: TBD
+- Allowed variation: TBD
+- Forbidden substitution: TBD
+- Signature mechanism: TBD
+- Token target: TBD
+- Component target: TBD
+- Motion target: TBD

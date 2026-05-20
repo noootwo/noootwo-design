@@ -41,6 +41,14 @@ Status: pending; define completion checks for the implementation agent
 - Color, type, spacing, surface, shape, and motion tokens applied: TBD
 - Typography scale, weight roles, line-height, letter-spacing, and fallback applied: TBD
 
+## Preservation Checks
+
+- Must-preserve mechanism is visible in the final artifact: TBD
+- Allowed variation stayed within the selected direction: TBD
+- Forbidden substitutions were avoided: TBD
+- Signature mechanism survived token, component, and motion translation: TBD
+- Component and motion targets were implemented or explicitly accepted as limitations: TBD
+
 ## Accessibility And Clarity Checks
 
 - TBD

@@ -79,6 +79,7 @@ Status: pending; required for deep mode before high-character directions
 - Component vocabulary: TBD
 - Motion thesis: TBD
 - Data, state, or interaction grammar: TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD; signature mechanism TBD
 
 ## Rejected Surfaces
 

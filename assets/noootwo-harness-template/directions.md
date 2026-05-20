@@ -6,6 +6,16 @@ Status: pending; generate for standard or deep design work
 
 - TBD
 
+## Preservation Contract
+
+- Must preserve: TBD
+- Allowed variation: TBD
+- Forbidden substitution: TBD
+- Signature mechanism: TBD
+- Token target: TBD
+- Component target: TBD
+- Motion target: TBD
+
 ## Full Redesign Checkpoint
 
 - Full redesign trigger: no
@@ -48,6 +58,7 @@ Status: pending; generate for standard or deep design work
 - Lineage and tone extreme: TBD
 - One unforgettable thing: TBD
 - Design-spec delta: color roles TBD; type roles TBD; layout model TBD; component vocabulary TBD; motion thesis TBD; forbidden moves TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD
 - Type, color, and density: TBD
 - Typography craft: font logic, scale, weight roles, line-height, letter-spacing, mobile display cap: TBD
 - Component and shape language: TBD
@@ -72,6 +83,7 @@ Status: pending; generate for standard or deep design work
 - Lineage and tone extreme: TBD
 - One unforgettable thing: TBD
 - Design-spec delta: color roles TBD; type roles TBD; layout model TBD; component vocabulary TBD; motion thesis TBD; forbidden moves TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD
 - Type, color, and density: TBD
 - Typography craft: font logic, scale, weight roles, line-height, letter-spacing, mobile display cap: TBD
 - Component and shape language: TBD
@@ -96,6 +108,7 @@ Status: pending; generate for standard or deep design work
 - Lineage and tone extreme: TBD
 - One unforgettable thing: TBD
 - Design-spec delta: color roles TBD; type roles TBD; layout model TBD; component vocabulary TBD; motion thesis TBD; forbidden moves TBD
+- Preservation contract: must preserve TBD; allowed variation TBD; forbidden substitution TBD
 - Type, color, and density: TBD
 - Typography craft: font logic, scale, weight roles, line-height, letter-spacing, mobile display cap: TBD
 - Component and shape language: TBD

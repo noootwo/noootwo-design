@@ -30,6 +30,16 @@ Status: pending; fill after the user selects a direction and before implementati
 - Target qualities: distinctive TBD; niche TBD; practical TBD; simple TBD; efficient TBD; premium TBD; current TBD
 - Anti-position: TBD
 
+## Preservation Contract
+
+- Must preserve: TBD
+- Allowed variation: TBD
+- Forbidden substitution: TBD
+- Signature mechanism: TBD
+- Token target: TBD
+- Component target: TBD
+- Motion target: TBD
+
 ## Design Spec Snapshot
 
 - Color roles: canvas TBD; surface TBD; text TBD; accent TBD; semantic TBD; data TBD
