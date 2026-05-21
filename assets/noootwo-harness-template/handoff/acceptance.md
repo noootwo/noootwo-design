@@ -32,6 +32,7 @@ Status: pending; define completion checks for the implementation agent
 - Narrow viewport: TBD
 - Text scale, browser zoom, or platform accessibility text size: TBD
 - Required states: TBD
+- State screenshots that must exist: TBD
 - Visual proof location: TBD
 - Overflow check result or `scripts/check_visual_gates.py` output: TBD
 - Flutter/native route, widget preview, simulator/device, or golden-style screenshot when relevant: TBD
@@ -48,6 +49,20 @@ Status: pending; define completion checks for the implementation agent
 - Forbidden substitutions were avoided: TBD
 - Signature mechanism survived token, component, and motion translation: TBD
 - Component and motion targets were implemented or explicitly accepted as limitations: TBD
+
+## Default Override Checks
+
+- Generic framework or UI-kit defaults were intentionally removed: TBD
+- Any surviving defaults were explicitly accepted with reason: TBD
+
+## Micro-Detail Checks
+
+- Divider, border, and inset treatment reviewed: TBD
+- Icon alignment and weight reviewed: TBD
+- Button/input height, padding, and focus or pressed behavior reviewed: TBD
+- Title wrapping, truncation, and long-copy handling reviewed: TBD
+- Empty/loading/error/disabled state craft reviewed: TBD
+- Scroll edges, clipping, and sticky boundaries reviewed: TBD
 
 ## Accessibility And Clarity Checks
 

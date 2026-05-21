@@ -59,6 +59,21 @@ Status: pending; fill after the user selects a direction and before implementati
 - Data or evidence grammar when relevant: TBD
 - Accessibility and localization constraints: TBD
 
+## Surface Inventory
+
+- Shippable surfaces, routes, or sections covered: TBD
+- Surface-by-surface task and hierarchy summary: TBD
+- Components that define each surface: TBD
+- Required states to review on each surface: TBD
+- Default fallback that must not survive on each surface: TBD
+
+## Detail Translation Constraints
+
+- Components that must be visibly re-authored, not just recolored: TBD
+- Detail rules that carry the direction: TBD
+- Defaults that must be overridden before review: TBD
+- Micro-detail areas that need artifact proof: TBD
+
 ## Implementation Contract
 
 - Tokens that must be applied: TBD

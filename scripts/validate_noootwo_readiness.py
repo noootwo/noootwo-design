@@ -100,6 +100,39 @@ DEEP_REFERENCE_SECTIONS = [
     "preservation contract",
 ]
 
+DETAIL_TRANSLATION_REQUIRED = {
+    ".noootwo/design-tokens.md": [
+        "detail rules",
+    ],
+    ".noootwo/specs/active-design.md": [
+        "surface inventory",
+        "detail translation constraints",
+    ],
+    ".noootwo/plans/active-implementation.md": [
+        "surface inventory translation",
+        "component restyling matrix",
+        "default override pass",
+        "micro-detail pass",
+    ],
+}
+
+DETAIL_TRANSLATION_OPTIONAL = {
+    ".noootwo/review.md": [
+        "default override review",
+        "micro-detail pass",
+    ],
+    ".noootwo/handoff/implementation.md": [
+        "surface inventory",
+        "component restyling matrix",
+        "default override pass",
+        "micro-detail pass",
+    ],
+    ".noootwo/handoff/acceptance.md": [
+        "default override checks",
+        "micro-detail checks",
+    ],
+}
+
 
 def validate_file(target_root: Path, relative_path: Path) -> list[str]:
     path = target_root / relative_path
@@ -117,6 +150,13 @@ def validate_file(target_root: Path, relative_path: Path) -> list[str]:
         errors.append(f"{relative_path} is empty")
 
     return errors
+
+
+def read_if_exists(target_root: Path, relative_path: Path) -> str:
+    path = target_root / relative_path
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8")
 
 
 def missing_sections(content: str, sections: list[str], path_label: str) -> list[str]:
@@ -267,6 +307,30 @@ def validate_implementation_gate(target_root: Path) -> list[str]:
     return errors
 
 
+def validate_detail_translation_gate(target_root: Path) -> list[str]:
+    errors: list[str] = []
+
+    for relative, sections in DETAIL_TRANSLATION_REQUIRED.items():
+        path = Path(relative)
+        errors.extend(validate_file(target_root, path))
+        full_path = target_root / path
+        if full_path.exists():
+            content = full_path.read_text(encoding="utf-8")
+            errors.extend(missing_sections(content, sections, relative))
+
+    for relative, sections in DETAIL_TRANSLATION_OPTIONAL.items():
+        path_obj = Path(relative)
+        content = read_if_exists(target_root, path_obj)
+        if not content:
+            continue
+        if STATUS_PENDING_RE.search(content):
+            continue
+        errors.extend(validate_file(target_root, path_obj))
+        errors.extend(missing_sections(content, sections, relative))
+
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Validate that Noootwo design deliverables are ready for handoff."
@@ -292,6 +356,11 @@ def main() -> int:
         action="store_true",
         help="Also require an approved design spec and approved/delegated implementation plan.",
     )
+    parser.add_argument(
+        "--detail-translation-gate",
+        action="store_true",
+        help="Also require implementation-stage detail-translation sections such as surface inventory, component restyling matrix, default override pass, and micro-detail pass.",
+    )
     args = parser.parse_args()
 
     target_root = Path(args.target).resolve()
@@ -307,6 +376,9 @@ def main() -> int:
         errors.extend(validate_deep_mode(target_root))
     if args.implementation_gate:
         errors.extend(validate_implementation_gate(target_root))
+    if args.detail_translation_gate:
+        errors.extend(validate_implementation_gate(target_root))
+        errors.extend(validate_detail_translation_gate(target_root))
 
     if errors:
         print("Noootwo readiness validation failed:")

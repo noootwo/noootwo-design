@@ -91,6 +91,43 @@ def eval_implementation(root: Path) -> list[str]:
     return errors
 
 
+def eval_detail_translation(root: Path) -> list[str]:
+    errors: list[str] = []
+    tokens = read(root, ".noootwo/design-tokens.md")
+    spec = read(root, ".noootwo/specs/active-design.md")
+    plan = read(root, ".noootwo/plans/active-implementation.md")
+    review = read(root, ".noootwo/review.md")
+    handoff_impl = read(root, ".noootwo/handoff/implementation.md")
+    handoff_acceptance = read(root, ".noootwo/handoff/acceptance.md")
+
+    require(errors, bool(tokens), "missing design tokens")
+    require(errors, "detail rules" in tokens.lower(), "design tokens detail rules missing")
+    require(errors, bool(spec), "missing approved design spec")
+    require(errors, bool(plan), "missing implementation plan")
+    require(errors, "surface inventory" in spec.lower(), "approved design spec surface inventory missing")
+    require(errors, "detail translation constraints" in spec.lower(), "approved design spec detail translation constraints missing")
+    require(errors, "surface inventory translation" in plan.lower(), "implementation plan surface inventory translation missing")
+    require(errors, "component restyling matrix" in plan.lower(), "implementation plan component restyling matrix missing")
+    require(errors, "default override pass" in plan.lower(), "implementation plan default override pass missing")
+    require(errors, "micro-detail pass" in plan.lower(), "implementation plan micro-detail pass missing")
+
+    if review:
+        require(errors, "default override review" in review.lower(), "review default override review missing")
+        require(errors, "micro-detail pass" in review.lower(), "review micro-detail pass missing")
+
+    if handoff_impl:
+        require(errors, "surface inventory" in handoff_impl.lower(), "handoff implementation surface inventory missing")
+        require(errors, "component restyling matrix" in handoff_impl.lower(), "handoff implementation component restyling matrix missing")
+        require(errors, "default override pass" in handoff_impl.lower(), "handoff implementation default override pass missing")
+        require(errors, "micro-detail pass" in handoff_impl.lower(), "handoff implementation micro-detail pass missing")
+
+    if handoff_acceptance:
+        require(errors, "default override checks" in handoff_acceptance.lower(), "handoff acceptance default override checks missing")
+        require(errors, "micro-detail checks" in handoff_acceptance.lower(), "handoff acceptance micro-detail checks missing")
+
+    return errors
+
+
 def eval_ready(root: Path) -> list[str]:
     errors: list[str] = []
     for relative in [
@@ -113,8 +150,17 @@ SCENARIOS = {
     "user-decision": eval_user_decision,
     "influence": eval_influence,
     "implementation": eval_implementation,
+    "detail-translation": eval_detail_translation,
     "ready": eval_ready,
 }
+
+DEFAULT_SCENARIOS = [
+    "full-redesign",
+    "user-decision",
+    "influence",
+    "implementation",
+    "ready",
+]
 
 
 def main() -> int:
@@ -129,7 +175,7 @@ def main() -> int:
     args = parser.parse_args()
 
     root = Path(args.target).resolve()
-    scenario_names = sorted(SCENARIOS) if args.scenario == "all" else [args.scenario]
+    scenario_names = DEFAULT_SCENARIOS if args.scenario == "all" else [args.scenario]
     all_errors: list[str] = []
 
     for name in scenario_names:

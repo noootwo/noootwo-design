@@ -75,6 +75,14 @@ Status: pending; fill or refresh when a direction moves toward implementation
 - Data or evidence components: TBD
 - Component naming rules: TBD
 
+## Detail Rules
+
+- Divider, border, and inset logic: TBD
+- Icon alignment and weight: TBD
+- Control height, padding, and spacing: TBD
+- Hover, pressed, and focus treatment: TBD
+- Title wrapping, truncation, and microcopy cadence: TBD
+
 ## Stack Mapping
 
 - CSS variables or Tailwind theme: TBD

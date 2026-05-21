@@ -20,7 +20,7 @@ Write `.noootwo/directions.md` with:
 - user decision gate: whether a choice is required, the exact question, options, recommendation, user selection, and whether the user delegated the choice
 - 3 named directions
 - surface type and why the chosen source pool fits
-- for each direction: discovery method, source evidence URL or screenshot, borrowed mechanisms, influence mechanism mix when used, mechanism-library match, rejected surfaces, calibration relationship, lineage/tone, unforgettable move, design-spec delta, type/color/density, typography craft, component/shape language, motion thesis, artifact strategy, why rare, what must never happen, mimicry risk to reject
+- for each direction: discovery method, case links the user can open, source evidence URL or screenshot, borrowed mechanisms, influence mechanism mix when used, mechanism-library match, rejected surfaces, calibration relationship, lineage/tone, unforgettable move, design-spec delta, type/color/density, typography craft, component/shape language, motion thesis, artifact strategy, why rare, what must never happen, mimicry risk to reject
 - for each direction: must-preserve, allowed-variation, forbidden-substitution, signature-mechanism, token-target, component-target, and motion-target
 
 ## Internal Preflight
@@ -32,6 +32,7 @@ Before drafting, confirm:
 - each direction states what must survive translation into tokens and implementation, what may vary, and what must never be substituted
 - product UI directions use product/design-system evidence, while campaign UI directions may use more experimental art-direction evidence
 - each direction names how it becomes reviewable
+- each direction includes at least one openable case link the user can inspect
 - each direction has stack translation
 - each direction defines font logic, scale, weight roles, line-height, letter-spacing, and mobile display cap
 - no direction is only a palette swap

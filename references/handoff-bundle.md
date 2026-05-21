@@ -18,9 +18,13 @@ Must include:
 - chosen direction
 - design spec snapshot: color roles, type roles, layout model, component vocabulary, motion thesis, and forbidden moves
 - layout map
+- surface inventory
 - component responsibilities
+- component restyling matrix
 - interaction and state notes
 - motion guidance
+- default override pass
+- micro-detail pass
 - stack-specific implementation notes
 - artifact reviewed and review evidence
 - token mapping from `.noootwo/design-tokens.md`
@@ -39,6 +43,8 @@ Must include:
 - responsive or platform checks
 - accessibility or clarity checks
 - screenshot or preview checks
+- default override checks
+- micro-detail checks
 - regression risks to watch
 
 ## `assets.md`

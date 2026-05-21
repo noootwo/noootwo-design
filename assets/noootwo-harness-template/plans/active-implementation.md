@@ -18,6 +18,13 @@ Status: pending; fill after `.noootwo/specs/active-design.md` is approved and be
 - Existing user changes to preserve: TBD
 - Rollback or experiment boundary: TBD
 
+## Surface Inventory Translation
+
+- Surface list and owner path: TBD
+- Surface-by-surface implementation order: TBD
+- Surface states that must be visible in artifact review: TBD
+- Surface-level generic fallback risks: TBD
+
 ## Implementation Steps
 
 1. TBD
@@ -47,6 +54,29 @@ Status: pending; fill after `.noootwo/specs/active-design.md` is approved and be
 - Controls and forms: TBD
 - States: loading TBD; empty TBD; error TBD; focus TBD; disabled TBD; selected TBD
 - Data or evidence components: TBD
+
+## Component Restyling Matrix
+
+- Component name, base primitive, and why it is the right starting point: TBD
+- Tokens or theme hooks that must change: TBD
+- Required state behavior and motion: TBD
+- Detail rules that must survive implementation: TBD
+- Defaults that must be removed or replaced: TBD
+
+## Default Override Pass
+
+- Framework or UI-kit defaults likely to survive: TBD
+- Defaults explicitly removed before review: TBD
+- Remaining defaults accepted with reason: TBD
+
+## Micro-Detail Pass
+
+- Divider, border, and inset logic: TBD
+- Iconography size, weight, and alignment: TBD
+- Button/input height, padding, and focus or pressed behavior: TBD
+- Title wrapping, truncation, and long-copy handling: TBD
+- Empty/loading/error/disabled state craft: TBD
+- Scroll edges, sticky boundaries, and clipping checks: TBD
 
 ## Artifact And Verification Plan
 

@@ -23,7 +23,7 @@ Write `.noootwo/style-calibration.md` with:
 
 - one style thesis
 - 5-7 dials: novelty, brand safety, density, typography contrast, motion presence, surface/material character, composition risk
-- 1-2 reference mechanisms from [verified-ui-casebook.md](verified-ui-casebook.md) when useful
+- 1-2 reference mechanisms from [verified-ui-casebook.md](verified-ui-casebook.md) when useful, with case links the user can open
 - one recommended calibration
 - what this rules out
 

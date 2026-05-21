@@ -20,9 +20,10 @@ A design cannot be marked `ready` without a reviewable artifact or explicit evid
 1. Declare the intended artifact before drafting.
 2. Build the fastest first artifact that can expose hierarchy, density, typography, motion posture, and component vocabulary.
 3. Review the artifact, not just the written plan.
-4. If the artifact is generic, return to directions or stack translation.
-5. If the artifact is directionally right but weak, return to draft.
-6. Only produce handoff after the artifact passes review or the user accepts an explicit limitation.
+4. If implementation detail drift is the risk, run the detail-translation pass on the artifact: surface inventory, component restyling, default overrides, and micro-detail review.
+5. If the artifact is generic, return to directions or stack translation.
+6. If the artifact is directionally right but weak, return to draft.
+7. Only produce handoff after the artifact passes review or the user accepts an explicit limitation.
 
 ## Wireframe Mode
 
@@ -38,6 +39,7 @@ Use wireframe mode when the direction is still uncertain or token/time budget is
 Use polish mode only after the direction is fundamentally right.
 
 - Refine typography, spacing, rhythm, contrast, state surfaces, and motion timing.
+- Review component defaults and micro-details, not only page composition.
 - Check responsive or platform-specific breakpoints.
 - Remove generic library defaults.
 - Preserve the one unforgettable move.

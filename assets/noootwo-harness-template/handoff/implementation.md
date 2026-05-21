@@ -59,9 +59,22 @@ Status: pending; fill this after a design direction has passed review
 
 - TBD
 
+## Surface Inventory
+
+- Shippable surfaces and routes: TBD
+- Surface-by-surface responsibilities: TBD
+- Surface states that must be visible in verification: TBD
+
 ## Components And Responsibilities
 
 - TBD
+
+## Component Restyling Matrix
+
+- Component name and base primitive: TBD
+- Tokens or theme hooks changed: TBD
+- Required states and motion behavior: TBD
+- Defaults removed or overridden: TBD
 
 ## Interaction And State Notes
 
@@ -79,6 +92,17 @@ Status: pending; fill this after a design direction has passed review
 ## Motion Guidance
 
 - TBD
+
+## Default Override Pass
+
+- Framework or UI-kit defaults removed before handoff: TBD
+- Defaults intentionally kept with reason: TBD
+
+## Micro-Detail Pass
+
+- Detail checks that must survive code translation: TBD
+- Highest-leverage authored details: TBD
+- Remaining drift risk to watch during implementation: TBD
 
 ## Stack-Specific Notes
 

@@ -4,7 +4,7 @@ Type once, get a design worth shipping.
 
 Noootwo Design is an open skill for UI design, frontend design, app-screen design, visual redesign, design-system extraction, artifact review, screenshot critique, token mapping, and implementation handoff.
 
-Current version: `v0.1.15`
+Current version: `v0.1.16`
 Version source: repository tag plus the root `VERSION` file.
 
 ## What It Does
@@ -22,6 +22,7 @@ Version source: repository tag plus the root `VERSION` file.
 - Uses stage roles and agentic style discovery for deep high-character design work
 - Uses optional influence discovery to find designer, artist, studio, product, movement, or spatial-system mechanisms without copying signature style
 - Preserves the discovered style through an explicit translation contract so the direction survives tokens, components, motion, and handoff
+- Adds an optional detail-translation pass for implementation-stage drift: surface inventory, component restyling, default overrides, and micro-detail review
 - Mines product flows, design systems, curated galleries, domestic fallback sources, and community signals, then transfers mechanisms instead of copying surfaces
 - Requires typography and responsive evidence before calling non-trivial design work ready
 - Keeps high-cost deep workflow limited to high-end, niche, brand-heavy, or major redesign tasks
@@ -118,6 +119,12 @@ For implementation work, require the approved spec and plan gate:
 python scripts/validate_noootwo_readiness.py /path/to/project --implementation-gate
 ```
 
+When a design is directionally correct but keeps drifting into default components or AI-looking detail, add the optional detail-translation gate after the implementation gate. This gate is intended for implementation-bound work and only checks handoff files if those files already exist and are no longer left as untouched templates:
+
+```bash
+python scripts/validate_noootwo_readiness.py /path/to/project --implementation-gate --detail-translation-gate
+```
+
 To inspect the workflow state without reading every markdown file:
 
 ```bash
@@ -172,6 +179,7 @@ This project does not copy private prompts. It implements public, repeatable mec
 - minimal bootstrap plus profile-based expansion to reduce default context noise
 - artifact structure evals for workflow pressure tests
 - typography, responsive, and spike-comparison gates for high-cost deep work
+- optional detail-translation gate for implementation-stage polish when previous output drifted generic
 - explicit but compact style calibration
 - code-native or stack-native artifacts before final judgment
 - token mapping before production handoff

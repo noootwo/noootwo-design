@@ -33,7 +33,7 @@ jobs:
       - name: Verify harness bootstrap
         run: |
           tmpdir="$(mktemp -d)"
-          python scripts/bootstrap_noootwo_harness.py "$tmpdir"
+          python scripts/bootstrap_noootwo_harness.py "$tmpdir" --profile full
           test -f "$tmpdir/AGENTS.md"
           test -f "$tmpdir/.noootwo/system.md"
           test -f "$tmpdir/.noootwo/design-tokens.md"

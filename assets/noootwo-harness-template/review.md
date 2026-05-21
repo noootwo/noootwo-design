@@ -74,6 +74,20 @@ Status: pending; every deliverable should replace this with a real review before
 - Avoids repeated card grids and generic centered hero structure: TBD
 - Motion supports state, continuity, emphasis, or identity: TBD
 
+## Default Override Review
+
+- Framework or UI-kit defaults still visible: TBD
+- Defaults intentionally re-authored: TBD
+- Surviving defaults accepted with reason: TBD
+
+## Micro-Detail Pass
+
+- Surfaces reviewed for authored details: TBD
+- States reviewed for authored details: TBD
+- Divider, icon, focus, and control-height issues found: TBD
+- Title wrapping, copy cadence, and truncation issues found: TBD
+- Highest-impact detail improvement or remaining drift: TBD
+
 ## Scores
 
 - design_quality: TBD / 35

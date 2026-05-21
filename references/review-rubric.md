@@ -23,7 +23,7 @@ Thresholds:
 
 ## Output
 
-Write `.noootwo/review.md` with artifact evidence, scores, calibration fit, user decision gate, generic/Claude/framework/designer-grade flags, role critique, memorable move, viewport evidence, typography evidence, data evidence when relevant, readiness gate, decision, return action, and next action.
+Write `.noootwo/review.md` with artifact evidence, scores, calibration fit, user decision gate, generic/Claude/framework/designer-grade flags, role critique, memorable move, viewport evidence, typography evidence, data evidence when relevant, default-override review, micro-detail pass, readiness gate, decision, return action, and next action.
 
 ## Gates To Read When Relevant
 
@@ -42,6 +42,7 @@ Before `ready`, confirm:
 - review records artifact evidence and a decision
 - review records typography evidence
 - review records responsive or platform evidence
+- implementation-bound work records default-override review and micro-detail review when generic drift was a risk
 - full redesign has recorded user-selected direction
 - required user decision gates are resolved or delegated
 

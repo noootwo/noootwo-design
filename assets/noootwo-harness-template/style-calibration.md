@@ -19,6 +19,7 @@ Status: pending; keep this short and refresh it before directions for taste-sens
 ## Reference Mechanisms
 
 - TBD
+- Case links the user can open: TBD
 
 ## Recommended Calibration
 

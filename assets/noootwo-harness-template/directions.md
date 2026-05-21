@@ -48,6 +48,7 @@ Status: pending; generate for standard or deep design work
 - Name: TBD
 - Discovery method used: TBD
 - Source pool: TBD
+- Case links (1-3): TBD
 - Source evidence URL or screenshot: TBD
 - Borrowed mechanisms: TBD
 - Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD
@@ -73,6 +74,7 @@ Status: pending; generate for standard or deep design work
 - Name: TBD
 - Discovery method used: TBD
 - Source pool: TBD
+- Case links (1-3): TBD
 - Source evidence URL or screenshot: TBD
 - Borrowed mechanisms: TBD
 - Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD
@@ -98,6 +100,7 @@ Status: pending; generate for standard or deep design work
 - Name: TBD
 - Discovery method used: TBD
 - Source pool: TBD
+- Case links (1-3): TBD
 - Source evidence URL or screenshot: TBD
 - Borrowed mechanisms: TBD
 - Influence mechanism mix: base atmosphere TBD; information grammar TBD; interaction efficiency TBD

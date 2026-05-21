@@ -6,7 +6,7 @@ license: MIT
 
 # Noootwo Design
 
-Noootwo Design turns UI requests into design-system-aware, stack-aware, reviewable interface work, with explicit preservation contracts so the discovered style survives translation into tokens, components, motion, and handoff.
+Noootwo Design turns UI requests into design-system-aware, stack-aware, reviewable interface work, with explicit preservation contracts so the discovered style survives translation into tokens, components, motion, and handoff. For implementation-bound work, it can also run a detail-translation pass so the style survives the last mile: surface inventory, component restyling, default overrides, and micro-detail review.
 
 Use for new UI pages, app screens, dashboards, workbenches, landing pages, visual redesign, typography, motion, art direction, screenshot review, design-system extraction, and handoff. Do not use for backend-only work, CLI tasks, pure logic bug fixes, or refactors with no UI impact.
 
@@ -21,7 +21,7 @@ Read only what the selected mode needs. Useful files include:
 - `.noootwo/specs/active-design.md`, `.noootwo/plans/active-implementation.md`
 - `.noootwo/review.md`, `.noootwo/handoff/implementation.md`, `.noootwo/handoff/acceptance.md`, `.noootwo/handoff/assets.md`
 
-If a file is missing, stale, or `Status: pending`, refresh only the minimum needed for the current step. Write decisions as structured design specs: evidence, confidence, color roles, type roles, layout/density, component vocabulary, motion, do/don't guidance, preservation contract, and stack mapping.
+If a file is missing, stale, or `Status: pending`, refresh only the minimum needed for the current step. Write decisions as structured design specs: evidence, confidence, color roles, type roles, layout/density, component vocabulary, motion, do/don't guidance, preservation contract, detail translation, and stack mapping.
 
 ## Mode Routing
 
@@ -30,7 +30,6 @@ Pick one mode first; do not run deep by default.
 - `quick`: minor polish, spacing/type fixes, or "stay close to current style".
 - `adopt-project`: first Noootwo use in an existing UI project; capture baseline before redesigning.
 - `standard`: ordinary new UI/redesign; light calibration, 3 directions, 1 artifact, review.
-- `deep`: high-end, niche, rare, brand-heavy, Claude Design-like, full redesign, or previous output was too generic.
 - `deep`: high-end, niche, rare, brand-heavy, Claude Design-like, full redesign, or previous output was too generic.
 - `production`: approved design implementation; tokens, stack mapping, artifact verification, handoff.
 - `extract-system`: build or refresh design memory and tokens.
@@ -67,7 +66,7 @@ User decision gate: ask the user when material uncertainty affects direction, br
 ### Standard
 
 - Refresh system facts if needed, write a short brief, and use [structured-design-spec.md](references/structured-design-spec.md).
-- Run light calibration, present 3 materially different directions, ask for selection, then create approved spec and implementation plan before UI edits.
+- Run light calibration, present 3 materially different directions with openable case links, ask for selection, then create approved spec and implementation plan before UI edits.
 - Build the fastest target-stack artifact and review with typography/responsive gates.
 
 ### Deep
@@ -76,13 +75,14 @@ User decision gate: ask the user when material uncertainty affects direction, br
 - Run source accessibility, source weighting, mechanism clustering, and optional influence discovery before directions.
 - Influence discovery finds designers, artists, studios, products, movements, or spatial systems as mechanism sources. Extract transferable mechanisms; do not imitate signature style.
 - Product/data UI must use product evidence and data rules; campaign/editorial UI may use more experimental references after rejecting low-utility surfaces.
-- For deep confidence, record 3-5 mechanisms, present 3 directions, build 2-3 small spikes when feasible, compare visual evidence, ask for selection, then continue to approved spec and plan.
+- For deep confidence, record 3-5 mechanisms, present 3 directions with openable case links, build 2-3 small spikes when feasible, compare visual evidence, ask for selection, then continue to approved spec and plan.
 - If source evidence, rejected surfaces, fit scores, spike comparison, or artifact evidence is missing, lower confidence and do not claim full exploration.
 
 ### Production
 
 - Read the approved spec and implementation plan before UI edits.
 - Map the chosen direction into `.noootwo/design-tokens.md` and target-stack notes.
+- For implementation-bound work that risks drifting generic, run a detail-translation pass: surface inventory, component restyling matrix, default override pass, then micro-detail review.
 - Use stack playbooks only when relevant: [web-react-vue.md](references/stacks/web-react-vue.md), [flutter.md](references/stacks/flutter.md), [native.md](references/stacks/native.md).
 
 ### Review
@@ -90,6 +90,7 @@ User decision gate: ask the user when material uncertainty affects direction, br
 - Prefer lived artifacts: screenshot, running page, simulator preview, target-stack prototype, or recorded interaction.
 - If no artifact evidence exists, mark `needs artifact` unless the user accepted the limitation.
 - Use [review-rubric.md](references/review-rubric.md), [typography-craft-rubric.md](references/typography-craft-rubric.md), and [responsive-visual-gates.md](references/responsive-visual-gates.md). Use [data-ui-rubric.md](references/data-ui-rubric.md) for dashboards or metric-heavy UI.
+- If the artifact feels directionally right but still generic, return to a micro-detail pass or enable the detail-translation gate before calling it ready.
 - A non-ready decision needs one return action: `return to discovery`, `return to directions`, `return to approved spec`, `return to artifact`, `return to responsive pass`, `return to typography pass`, `return to stack pass`, or `return to handoff`.
 
 ## Hard Rules
@@ -100,6 +101,7 @@ User decision gate: ask the user when material uncertainty affects direction, br
 - Do not replace generic SaaS with Claude-ish formula: serif headline, mono annotations, dossier panels, pills/status dots, and archival language without product reason.
 - Do not imitate a specific designer/artist's signature look. Borrow mechanisms and reject mimicry.
 - Do not keep only the surface style of a reference while losing its mechanism, token logic, or component/motion vocabulary.
+- Do not present a direction menu without openable case links or source evidence the user can inspect.
 - Do not justify product UI using only campaign-gallery references.
 - Flutter/native work needs stack-native preview evidence; HTML proxy is fallback only and cannot be stack-native ready.
 - A design is not complete while required `.noootwo/` deliverables are pending, unresolved, or missing artifact evidence.
@@ -112,4 +114,4 @@ User decision gate: ask the user when material uncertainty affects direction, br
 - Discovery: [agentic-style-discovery.md](references/agentic-style-discovery.md), [source-registry.md](references/source-registry.md), [research-source-fallback.md](references/research-source-fallback.md), [reference-board.md](references/reference-board.md)
 - System/spec/tokens: [system-extraction.md](references/system-extraction.md), [design-system-setup.md](references/design-system-setup.md), [structured-design-spec.md](references/structured-design-spec.md)
 - Directions/taste: [direction-exploration.md](references/direction-exploration.md), [taste-fit-matrix.md](references/taste-fit-matrix.md), [mechanism-library.md](references/mechanism-library.md), [style-lineages.md](references/style-lineages.md), [frontend-aesthetic-principles.md](references/frontend-aesthetic-principles.md), [impeccable-style-details.md](references/impeccable-style-details.md), [anti-slop.md](references/anti-slop.md)
-- Artifacts/stacks/review: [canvas-artifact-loop.md](references/canvas-artifact-loop.md), [target-stack-rules.md](references/target-stack-rules.md), [review-rubric.md](references/review-rubric.md), [review-gates.md](references/review-gates.md), [handoff-bundle.md](references/handoff-bundle.md)
+- Artifacts/stacks/review: [canvas-artifact-loop.md](references/canvas-artifact-loop.md), [target-stack-rules.md](references/target-stack-rules.md), [review-rubric.md](references/review-rubric.md), [review-gates.md](references/review-gates.md), [detail-translation-pass.md](references/detail-translation-pass.md), [handoff-bundle.md](references/handoff-bundle.md)

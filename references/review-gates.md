@@ -53,7 +53,11 @@ Any `style preserved only at the surface, not in the mechanism`, `tokens exist b
 ## Forced Return Rules
 
 - Missing type contrast, density stance, component vocabulary, motion thesis, or background/detail thesis: return to directions.
+- Direction menu without openable case links or source evidence: return to directions.
 - Missing artifact strategy, stack translation, or visual proof: return to directions or stack translation.
+- Implementation-bound work missing surface inventory or detail translation constraints: return to approved spec.
+- Implementation-bound work missing component restyling matrix or default override pass: return to implementation plan.
+- Artifact is close but still generic and no micro-detail pass was recorded: return to artifact or enable the detail-translation gate.
 - Missing deep source evidence or spike comparison: return to discovery or artifact.
 - Missing token mapping in production: return to `.noootwo/design-tokens.md`.
 - Missing preservation contract: return to directions or approved spec.

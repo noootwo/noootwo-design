@@ -118,6 +118,17 @@ For each selected direction, explicitly name:
 - `component target`: the component vocabulary that needs to exist
 - `motion target`: the motion rule that needs to exist
 
+### 12. Surface Inventory And Detail Translation
+
+Use this layer only when the work is implementation-bound, production-facing, or a previous result looked directionally right but too generic in the details.
+
+- `surface inventory`: list each shippable surface, route, section, or screen and the few components/states that define it
+- `component restyling matrix`: for each important component, name the base primitive, what must be restyled, what state behavior must exist, and which defaults must not survive
+- `default override pass`: record the framework or UI-kit defaults that would collapse the design into a generic fallback
+- `micro-detail pass`: review dividers, icon alignment, focus treatment, button height, title wrapping, empty/loading/error states, scroll edges, and microcopy cadence
+- `evidence threshold`: do not claim this layer is complete without artifact evidence for the key states that carry the direction
+- `cost boundary`: do not force this layer into quick polish or early direction exploration
+
 ## Direction Usage
 
 Each direction should include a `Design-spec delta`: the subset of this spec that would become project truth if the user selects it. Keep this shorter than the system memory; focus on the decisions that make the direction materially different.
